@@ -168,6 +168,317 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="title-操作系统理论篇" class="article article-type-title  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/18/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA%E7%AF%87/">操作系统理论篇</a>
+    </h1>
+  
+
+		
+			<!-- 开始添加字数统计-->
+			
+			<!-- 添加完成 -->
+			
+			<!--显示阅读次数-->
+			
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="操作系统理论篇"><a href="#操作系统理论篇" class="headerlink" title="操作系统理论篇"></a>操作系统理论篇</h1><h2 id="第1章-操作系统概论"><a href="#第1章-操作系统概论" class="headerlink" title="第1章  操作系统概论"></a>第1章  操作系统概论</h2><h3 id="1-1-操作系统概观"><a href="#1-1-操作系统概观" class="headerlink" title="1.1 操作系统概观"></a>1.1 操作系统概观</h3><h4 id="1-1-1-操作系统与计算机系统的关系"><a href="#1-1-1-操作系统与计算机系统的关系" class="headerlink" title="1.1.1 操作系统与计算机系统的关系"></a>1.1.1 操作系统与计算机系统的关系</h4><p>现代计算机系统由硬件和软件两个部分组成，缺一不可。    硬件包括：运算器，控制器，存储器，输入设备，输出设备    软件包括：系统软件，支撑软件，应用软件 </p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201112175923.png"></p>
+<h4 id="1-1-2-操作系统资源管理技术"><a href="#1-1-2-操作系统资源管理技术" class="headerlink" title="1.1.2 操作系统资源管理技术"></a>1.1.2 操作系统资源管理技术</h4><ol>
+<li><p>资源：硬件资源，软件资源。资源有限，用者众多。</p>
+</li>
+<li><p>复用：操作系统让众多进程共享物理资源，称为资源复用。      </p>
+<ul>
+<li>空分复用共享：空间分割，内存，磁盘。          </li>
+<li>时分复用共享：时间分割，CPU。   </li>
+</ul>
+</li>
+<li><p>虚拟：把一个物理资源虚拟成多个逻辑上的对应物。          </p>
+<ul>
+<li>虚拟内存，虚拟设备（打印机），虚拟文件系统。  </li>
+</ul>
+</li>
+<li><p>抽象：把不同物理资源抽象成一个统一的对象。        </p>
+<ul>
+<li>进程抽象，虚存抽象，文件抽象。</li>
+<li>进程抽象、虚存抽象、文件抽象原理图</li>
+</ul>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201112183758.png"></p>
+<ul>
+<li>I/O 软件及设备驱动程序是物理设备的抽象  </li>
+</ul>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201112181707.png"></p>
+</li>
+<li><p>虚拟机：用软件模拟的计算机。VmWare，VirtualBox </p>
+</li>
+</ol>
+<blockquote>
+<p>备注：</p>
+<p>1、复用和虚拟的主要目标是解决物理资源数量分配不足的问题，抽象则用于处理系统复杂性，重点解决资源易失性</p>
+</blockquote>
+<h4 id="1-1-3-操作系统的定义和作用"><a href="#1-1-3-操作系统的定义和作用" class="headerlink" title="1.1.3 操作系统的定义和作用"></a>1.1.3 操作系统的定义和作用</h4><ul>
+<li>操作系统（Operating System，OS）是直接运行在计算机硬件之上的，管理计算机系统资源，为用户提供良好接口的程序集合（软件）。   </li>
+</ul>
+<blockquote>
+<p>对内管理，对外服务。</p>
+</blockquote>
+<ul>
+<li>作用：<ol>
+<li>服务用户观点：作为用户接口和公共服务程序</li>
+<li>进程交互观点：作为进程执行的控制者和协调者</li>
+<li>系统实现观点：作为扩展机或虚拟机</li>
+<li>资源管理观点：作为资源的管理者和控制者</li>
+</ol>
+</li>
+</ul>
+<h4 id="1-1-4-操作系统的功能和特性"><a href="#1-1-4-操作系统的功能和特性" class="headerlink" title="1.1.4 操作系统的功能和特性"></a>1.1.4 操作系统的功能和特性</h4><h5 id="功能（资源管理观点）："><a href="#功能（资源管理观点）：" class="headerlink" title="功能（资源管理观点）："></a>功能（资源管理观点）：</h5><pre><code>  处理器管理            存储管理            设备管理            文件管理            联网与通信管理       </code></pre>
+<h5 id="特性："><a href="#特性：" class="headerlink" title="特性："></a>特性：</h5><p>​    并发性            共享性            异步性（随机性，不可预知性）</p>
+<h3 id="1-2-操作系统的形成与发展"><a href="#1-2-操作系统的形成与发展" class="headerlink" title="1.2 操作系统的形成与发展"></a>1.2 操作系统的形成与发展</h3><h4 id="1-2-1-人工操作阶段"><a href="#1-2-1-人工操作阶段" class="headerlink" title="1.2.1 人工操作阶段"></a>1.2.1 人工操作阶段</h4><p>  单个用户独占资源，资源利用率低。   </p>
+<h4 id="1-2-2-执行系统阶段"><a href="#1-2-2-执行系统阶段" class="headerlink" title="1.2.2 执行系统阶段"></a>1.2.2 执行系统阶段</h4><p>以作业的形式向系统提交任务，自动控制和处理作业流。 </p>
+<h4 id="1-2-3-多道程序设计与操作系统形成"><a href="#1-2-3-多道程序设计与操作系统形成" class="headerlink" title="1.2.3 多道程序设计与操作系统形成"></a>1.2.3 多道程序设计与操作系统形成</h4><ol>
+<li>多道程序设计：多个作业同时进入系统交替执行。  </li>
+<li>需要存储管理，中断技术和文件管理的支持。    </li>
+<li>多道的原因：大多数作业花费较长时间等待I/O。   </li>
+</ol>
+<h4 id="1-2-4-操作系统发展与分类"><a href="#1-2-4-操作系统发展与分类" class="headerlink" title="1.2.4 操作系统发展与分类"></a>1.2.4 操作系统发展与分类</h4><ol>
+<li>批处理操作系统：最先采用多道程序设计。     </li>
+<li>分时操作系统：增加交互的灵活性。     </li>
+<li>实时操作系统：提供抢占以满足实时。     </li>
+<li>嵌入式操作系统：可裁剪的实时。     </li>
+<li>典型操作系统：UNIX, Windows, Linux, Android, VxWorks</li>
+</ol>
+<h3 id="1-3-操作系统基本服务和用户接口"><a href="#1-3-操作系统基本服务和用户接口" class="headerlink" title="1.3 操作系统基本服务和用户接口"></a>1.3 操作系统基本服务和用户接口</h3><h4 id="1-3-1-基本服务和用户接口"><a href="#1-3-1-基本服务和用户接口" class="headerlink" title="1.3.1 基本服务和用户接口"></a>1.3.1 基本服务和用户接口</h4><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201112201021.png"></p>
+<ol>
+<li>基本服务：编写运行程序，数据I/O，进程通信，差错处理。  </li>
+<li>用户接口：程序接口（系统调用）；               </li>
+<li>操作接口：命令（系统程序）和图形界面。  </li>
+</ol>
+<h4 id="1-3-2-程序接口与系统调用"><a href="#1-3-2-程序接口与系统调用" class="headerlink" title="1.3.2 程序接口与系统调用"></a>1.3.2 程序接口与系统调用</h4><ol>
+<li>程序接口：即API（Application Program Interface，API）。            </li>
+<li>系统调用：操作系统提供的API。POSIX标准。</li>
+<li>库函数：高级语言提供的API。部分是对系统调用的封装。          </li>
+<li>系统调用实现：同步的异常处理，从目态到管态。   </li>
+</ol>
+<h4 id="1-3-3-操作接口与系统程序"><a href="#1-3-3-操作接口与系统程序" class="headerlink" title="1.3.3 操作接口与系统程序"></a>1.3.3 操作接口与系统程序</h4><h5 id="作业："><a href="#作业：" class="headerlink" title="作业："></a>作业：</h5><p>是用户提交给操作系统执行的一个独立任务。</p>
+<h5 id="作业控制方式："><a href="#作业控制方式：" class="headerlink" title="作业控制方式："></a>作业控制方式：</h5><ol>
+<li>联机：命令行，批处理，图形。</li>
+<li>脱机：用于批处理。      </li>
+</ol>
+<h5 id="命令解释程序：Linux-shell"><a href="#命令解释程序：Linux-shell" class="headerlink" title="命令解释程序：Linux shell"></a>命令解释程序：Linux shell</h5><pre><code> 应用程序（utility）</code></pre>
+<h4 id="1-3-4-Linux系统调用及实现机制"><a href="#1-3-4-Linux系统调用及实现机制" class="headerlink" title="1.3.4 Linux系统调用及实现机制"></a>1.3.4 Linux系统调用及实现机制</h4><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201112202944.png"></p>
+<h3 id="1-4-操作系统的结构和运行模型"><a href="#1-4-操作系统的结构和运行模型" class="headerlink" title="1.4 操作系统的结构和运行模型"></a>1.4 操作系统的结构和运行模型</h3><h4 id="1-4-1-操作系统结构分类"><a href="#1-4-1-操作系统结构分类" class="headerlink" title="1.4.1 操作系统结构分类"></a>1.4.1 操作系统结构分类</h4><h5 id="单体式结构："><a href="#单体式结构：" class="headerlink" title="单体式结构："></a>单体式结构：</h5><p>​    按功能把系统分解为若干模块，模块间无序调用，所有模块作为一个单独的大过程来实现，运行时是一个大二进制映像。UNIX      </p>
+<h5 id="层次式结构："><a href="#层次式结构：" class="headerlink" title="层次式结构："></a>层次式结构：</h5><p>​    系统由内核和若干模块组成，模块按功能划分成层次，模块之间有序调用。      </p>
+<h5 id="虚拟机结构："><a href="#虚拟机结构：" class="headerlink" title="虚拟机结构："></a>虚拟机结构：</h5><p>​    把物理计算机虚拟成若干虚拟机，每个应用程序占用一个虚拟机。IBM VM/370      </p>
+<h5 id="微内核结构："><a href="#微内核结构：" class="headerlink" title="微内核结构："></a>微内核结构：</h5><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201112203929.png"></p>
+<p>​    系统由运行在内核态的内核和运行在用户态的进程层组成。Windows    </p>
+<h4 id="1-4-2-Linux操作系统结构设计"><a href="#1-4-2-Linux操作系统结构设计" class="headerlink" title="1.4.2 Linux操作系统结构设计"></a>1.4.2 Linux操作系统结构设计</h4><p>​    单内核（内核态），应用程序（用户态），模块加载</p>
+<h4 id="1-4-3-操作系统内核"><a href="#1-4-3-操作系统内核" class="headerlink" title="1.4.3 操作系统内核"></a>1.4.3 操作系统内核</h4><h5 id="内核概念："><a href="#内核概念：" class="headerlink" title="内核概念："></a>内核概念：</h5><p>是一组程序模块，作为可信软件来提供支持进程并发执行的基本功能和基本操作，运行于内核态，具有直接访问硬件设备和所有内存空间的权限。      </p>
+<p>微内核（micro kernel），单内核（monolithic kernel）      </p>
+<h5 id="内核功能："><a href="#内核功能：" class="headerlink" title="内核功能："></a>内核功能：</h5><p>中断处理，时钟管理，短程调度，原语管理。      </p>
+<h5 id="内核属性："><a href="#内核属性：" class="headerlink" title="内核属性："></a>内核属性：</h5><p>中断驱动，不可抢占，屏蔽中断，特权指令。      </p>
+<p>机制（mechanism）与策略（policy）分离原则。应用问题的解决可分为两部分，即“提供并实现确定的功能（机制），将机制作为系统的可信软件来实现”和“如何使用这些功能（策略），在不可信环境中定义策略”。    </p>
+<h4 id="1-4-4-操作系统运行模型"><a href="#1-4-4-操作系统运行模型" class="headerlink" title="1.4.4 操作系统运行模型"></a>1.4.4 操作系统运行模型</h4><p>系统调用嵌入应用进程运行模型。      </p>
+<p>系统调用作为独立进程运行模型。</p>
+<h3 id="1-5-流行操作系统简介"><a href="#1-5-流行操作系统简介" class="headerlink" title="1.5 流行操作系统简介"></a>1.5 流行操作系统简介</h3><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201118193308.png"></p>
+<h4 id="1-5-1-UNIX操作系统"><a href="#1-5-1-UNIX操作系统" class="headerlink" title="1.5.1 UNIX操作系统"></a>1.5.1 UNIX操作系统</h4><p>1969年，AT&amp;T公司Bell实验室，加州大学伯克利分校。      Ken. Thompson，Dennis Ritchie，C语言。POSIX标准。    </p>
+<h4 id="1-5-2-Windows操作系统"><a href="#1-5-2-Windows操作系统" class="headerlink" title="1.5.2 Windows操作系统"></a>1.5.2 Windows操作系统</h4><p>Bill Gates，Mircosoft，DOS，GUI，Windows，IE，Office            Windows：3.0，98，Me，xp，7，10；NT，2000，Server    </p>
+<h4 id="1-5-3-Linux操作系统"><a href="#1-5-3-Linux操作系统" class="headerlink" title="1.5.3 Linux操作系统"></a>1.5.3 Linux操作系统</h4><p> Linus Torvalds，Richard Stallman      自由软件，GNU，GPL    </p>
+<h4 id="1-5-4-IBM操作系统"><a href="#1-5-4-IBM操作系统" class="headerlink" title="1.5.4 IBM操作系统"></a>1.5.4 IBM操作系统</h4><p>OS/390，z/OS，OS/400，AIX。    </p>
+<h4 id="1-5-5-Android操作系统"><a href="#1-5-5-Android操作系统" class="headerlink" title="1.5.5 Android操作系统"></a>1.5.5 Android操作系统</h4><p> Google 领导手机联盟，基于Linux，用于移动设备</p>
+<h2 id="第2章-处理器管理"><a href="#第2章-处理器管理" class="headerlink" title="第2章  处理器管理"></a>第2章  处理器管理</h2><h3 id="2-1-处理器状态"><a href="#2-1-处理器状态" class="headerlink" title="2.1 处理器状态"></a>2.1 处理器状态</h3><h4 id="2-1-1-处理器"><a href="#2-1-1-处理器" class="headerlink" title="2.1.1 处理器"></a>2.1.1 处理器</h4><p><strong>指令系统和寄存器</strong>：用户面对处理器的编程模型。</p>
+<p><strong>指令系统</strong>：运算类，传送类，控制类。100条左右。      </p>
+<p><strong>寄存器</strong>：通用寄存器，特殊寄存器：PC，IP，PSW     </p>
+<p><strong>特权指令和非特权指令：</strong>指令格式的某个位。    </p>
+<p> <strong>内核态和用户态：</strong>程序状态字的某个位（x86两个位）。     </p>
+<p><strong>处理器状态及其转换：</strong>只有通过中断及中断返回来转换。     </p>
+<p><strong>用户栈和核心栈：</strong>一个栈指针，两个地址。    </p>
+<h4 id="2-1-2-程序状态字（Program-Status-Word，PSW）"><a href="#2-1-2-程序状态字（Program-Status-Word，PSW）" class="headerlink" title="2.1.2 程序状态字（Program Status Word，PSW）"></a>2.1.2 程序状态字（Program Status Word，PSW）</h4><h3 id="2-2-中断技术"><a href="#2-2-中断技术" class="headerlink" title="2.2 中断技术"></a>2.2 中断技术</h3><h4 id="2-2-1-中断概念"><a href="#2-2-1-中断概念" class="headerlink" title="2.2.1 中断概念"></a>2.2.1 中断概念</h4><p>中断（interrupt）指在程序执行过程中遇到急需处理的事件时，暂时终止现行程序在CPU上的执行，转而执行相应的事件处理程序，待事件处理完成后再返回断点或调度其他程序执行的过程。     </p>
+<p>起初，中断只用于管理外设，后来，应用范围越来越广。     </p>
+<p>操作系统是由“中断驱动的”。   </p>
+<h4 id="2-2-2-中断源分类"><a href="#2-2-2-中断源分类" class="headerlink" title="2.2.2 中断源分类"></a>2.2.2 中断源分类</h4><p><strong>外中断</strong>，中断，异步中断：</p>
+<blockquote>
+<p>处理器外部的中断信号，时钟，外部设备（键盘，网卡等）。可屏蔽，不能阻塞。       </p>
+</blockquote>
+<p><strong>内中断</strong>，异常，同步中断：</p>
+<blockquote>
+<p>处理器内部的中断信号，包括访管中断，硬件故障中断，程序性异常，自陷。不能屏蔽。      </p>
+</blockquote>
+<h4 id="2-2-3-中断和异常的响应及服务"><a href="#2-2-3-中断和异常的响应及服务" class="headerlink" title="2.2.3 中断和异常的响应及服务"></a>2.2.3 中断和异常的响应及服务</h4><p>确定中断源，保护现场，中断处理，恢复现场。</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201113153047.png"></p>
+<h4 id="2-2-4-Linux中断处理"><a href="#2-2-4-Linux中断处理" class="headerlink" title="2.2.4 Linux中断处理"></a>2.2.4 Linux中断处理</h4><h5 id="1、Linux内核处理中断流程"><a href="#1、Linux内核处理中断流程" class="headerlink" title="1、Linux内核处理中断流程"></a>1、Linux内核处理中断流程</h5><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201118185757.png"></p>
+<h5 id="2、Linux中断机制"><a href="#2、Linux中断机制" class="headerlink" title="2、Linux中断机制"></a>2、Linux中断机制</h5><p><strong>中断向量</strong></p>
+<p><strong>中断请求</strong></p>
+<p><strong>中断描述符表</strong></p>
+<h5 id="3、Linux下半部分处理"><a href="#3、Linux下半部分处理" class="headerlink" title="3、Linux下半部分处理"></a>3、Linux下半部分处理</h5><p>小任务（tasklet）        工作队列（work queue）        软中断（softirq）</p>
+<h3 id="2-3-进程及其实现"><a href="#2-3-进程及其实现" class="headerlink" title="2.3 进程及其实现"></a>2.3 进程及其实现</h3><h4 id="2-3-1-进程定义和属性"><a href="#2-3-1-进程定义和属性" class="headerlink" title="2.3.1 进程定义和属性"></a>2.3.1 进程定义和属性</h4><blockquote>
+<p>进程定义：进程是具有独立功能的程序在某个数据集合上的一次运行活动，是操作系统进行资源分配和保护的基本单位。   </p>
+</blockquote>
+<h5 id="引入进程的主要目的"><a href="#引入进程的主要目的" class="headerlink" title="引入进程的主要目的"></a>引入进程的主要目的</h5><ol>
+<li>刻画程序的并发性</li>
+<li>解决资源的共享</li>
+</ol>
+<h5 id="进程属性："><a href="#进程属性：" class="headerlink" title="进程属性："></a>进程属性：</h5><p>动态性，共享性，独立性，制约性，并发性。  </p>
+<h4 id="2-3-2-进程状态及转换"><a href="#2-3-2-进程状态及转换" class="headerlink" title="2.3.2 进程状态及转换"></a>2.3.2 进程状态及转换</h4><h5 id="三态模型："><a href="#三态模型：" class="headerlink" title="三态模型："></a>三态模型：</h5><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201118193040.png"></p>
+<h5 id="七态模型"><a href="#七态模型" class="headerlink" title="七态模型"></a>七态模型</h5><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201118193153.png"></p>
+<h4 id="2-3-3-进程描述和组成"><a href="#2-3-3-进程描述和组成" class="headerlink" title="2.3.3 进程描述和组成"></a>2.3.3 进程描述和组成</h4><h5 id="1、进程映像："><a href="#1、进程映像：" class="headerlink" title="1、进程映像："></a>1、进程映像：</h5><p>某时刻进程的内容及其状态集合。       </p>
+<p>进程控制块，进程程序块，进程数据块，进程核心栈       </p>
+<p>进程上下文（process context）：物理实体及运行环境。</p>
+<p> 用户级上下文，寄存器级上下文，系统级上下文       </p>
+<p>进程映像是进程上下文的一部分。</p>
+<h5 id="2、进程控制块（Process-Control-Block，PCB）"><a href="#2、进程控制块（Process-Control-Block，PCB）" class="headerlink" title="2、进程控制块（Process Control Block，PCB）"></a>2、进程控制块（Process Control Block，PCB）</h5><blockquote>
+<p>PCB是操作系统感知进程的唯一标识，是操作系统用来记录进程运行过程的数据结构，包含管理进程的全部信息（1KB）。     </p>
+</blockquote>
+<p> PCB包括：         </p>
+<p><strong>标识信息</strong>：如进程号         </p>
+<p><strong>现场信息</strong>：如程序状态字、各种寄存器         </p>
+<p><strong>控制信息</strong>：调度信息——优先级、特权、等待事件                  </p>
+<p> <strong>族系信息</strong>——父子进程                  </p>
+<p><strong>通信信息</strong>——信号、锁队列                   </p>
+<p><strong>存储信息</strong>——页表                   </p>
+<p><strong>时间信息</strong>——定时器，时间片                   </p>
+<p><strong>资源信息</strong>——文件、设备  </p>
+<h4 id="2-3-4-进程上下文切换及处理器状态转换"><a href="#2-3-4-进程上下文切换及处理器状态转换" class="headerlink" title="2.3.4 进程上下文切换及处理器状态转换"></a>2.3.4 进程上下文切换及处理器状态转换</h4><h5 id="1、进程上下文切换"><a href="#1、进程上下文切换" class="headerlink" title="1、进程上下文切换"></a>1、进程上下文切换</h5><p>进程调度时进行上下文切换，必定在内核态。      </p>
+<h5 id="2、进程上下文切换时机"><a href="#2、进程上下文切换时机" class="headerlink" title="2、进程上下文切换时机"></a>2、进程上下文切换时机</h5><p>进程上下文切换时机就是进程调度时机。进程调度时机分两种：</p>
+<p><strong>主动调度</strong>，当前运行进程因为自身某种原因暂停引起调度程序的执行；</p>
+<p><strong>被动调度</strong>，当前运行进程因为时间片耗尽、新进程产生、某进程优先级改变以及某进程被唤醒等原因导致被暂停而运行进程调度程序。      </p>
+<h5 id="3、处理器状态转换"><a href="#3、处理器状态转换" class="headerlink" title="3、处理器状态转换"></a>3、处理器状态转换</h5><p>处理器状态转换与上下文切换没有必然的联系。          </p>
+<p>从用户态切换至内核态时，不需要上下文切换。         </p>
+<p>从内核态切换至用户态时，有时候需要上下文切换。</p>
+<h4 id="2-3-5-进程控制和管理"><a href="#2-3-5-进程控制和管理" class="headerlink" title="2.3.5 进程控制和管理"></a>2.3.5 进程控制和管理</h4><h5 id="1、进程创建"><a href="#1、进程创建" class="headerlink" title="1、进程创建"></a>1、进程创建</h5><p>操作系统初始化后创建祖先进程，之后创建的每一个进程都有其父进程。进程数=内存字节数/内核堆栈大小/2。    </p>
+<h5 id="2、进程阻塞和唤醒"><a href="#2、进程阻塞和唤醒" class="headerlink" title="2、进程阻塞和唤醒"></a>2、进程阻塞和唤醒</h5><p>阻塞是指进程为等待某事件自己调用阻塞原语阻塞自己，引起进程调度。唤醒由相关的进程调用唤醒原语唤醒该进程，修改进程状态，设置重新调度标志，移入就绪队列。    </p>
+<h5 id="3、挂起和激活"><a href="#3、挂起和激活" class="headerlink" title="3、挂起和激活"></a>3、挂起和激活</h5><p>某种情况下，系统会把某些进程挂起，根据状态移入就绪态或等待态。反之激活。    </p>
+<h5 id="4、进程撤销"><a href="#4、进程撤销" class="headerlink" title="4、进程撤销"></a>4、进程撤销</h5><p>发生撤销的事件时，系统或进程调用撤销原语撤销进程。 </p>
+<h3 id="2-4-线程及其实现"><a href="#2-4-线程及其实现" class="headerlink" title="2.4 线程及其实现"></a>2.4 线程及其实现</h3><h4 id="2-4-1-引入线程的动机"><a href="#2-4-1-引入线程的动机" class="headerlink" title="2.4.1 引入线程的动机"></a>2.4.1 引入线程的动机</h4><p>线程是进程中能够并发执行的实体，是进程的组成部分，也是处理器调度和分派的基本单位，一个进程可包含多个线程。</p>
+<p><strong>引入进程的目的</strong>是为了多个程序并发执行。      </p>
+<p><strong>引入线程的目的</strong>是为了减少程序并发执行付出的时空开销。      </p>
+<p><strong>资源分配以进程为单位,并发调度以线程为单位。</strong></p>
+<h4 id="2-4-2-线程的实现"><a href="#2-4-2-线程的实现" class="headerlink" title="2.4.2 线程的实现"></a>2.4.2 线程的实现</h4><p>**内核级线程 **（Kernel Level Thread，KLT）。      </p>
+<p>**用户级线程 **（User Level Thread，ULT）。      </p>
+<p><strong>混合级线程</strong>      </p>
+<p>**线程调度 **：用户级线程调度 内核级线程调度</p>
+<h4 id="Linux线程是用户级还是内核级？"><a href="#Linux线程是用户级还是内核级？" class="headerlink" title="Linux线程是用户级还是内核级？"></a>Linux线程是用户级还是内核级？</h4><p>posix线程调度是一个<strong>混合模型</strong>。模型中包括两级调度：线程级和内核实体级。线程级与用户级线程类似，内核实体由内核调度。        </p>
+<p>通过pthread_create()函数创建线程时，可以通过线程的<strong>scope属性</strong>来设置所创建的线程是用户级还是内核级。</p>
+<p>带有<strong>PTHREAD_SCOPE_PROCESS属性</strong>的线程与它所在的进程中的其他线程竞争处理器资源。</p>
+<p>带有<strong>PTHREAD_SCOPE_SYSTEM属性</strong>的线程很像内核级线程，它们在全系统的范围内竞争处理器资源。</p>
+<p>创建一个内核级线程，代码如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pthread_attr_t    attr;                                  // 申明一个线程属性变量</span><br><span class="line">pthread_attr_init(&amp;attr);                                // 初始化这个线程属性变量</span><br><span class="line">pthread_attr_setscope(&amp;attr, PTHREAD_SCOPE_SYSTEM);    </span><br><span class="line">// 设置这个线程数形变量中的scope值为PTHREAD_SCOPE_SYSTEM</span><br><span class="line">……</span><br><span class="line">ret = pthread_create(&amp;ThreadId, &amp;attr,Threadfunction, NULL);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-5-Linux进程"><a href="#2-5-Linux进程" class="headerlink" title="2.5 Linux进程"></a>2.5 Linux进程</h3><h4 id="2-5-1-Linux进程描述符"><a href="#2-5-1-Linux进程描述符" class="headerlink" title="2.5.1 Linux进程描述符"></a>2.5.1 Linux进程描述符</h4><blockquote>
+<p>Linux启动时最先产生idle进程（pid=0），此进程会创建一个内核线程来执行初始化工作，结果使处理器的运行模式由内核态切换至用户态，内核线程演变为第一个用户进程init（pid=1），一切用户进程都是它的后代。      </p>
+</blockquote>
+<p><strong>Linux中PCB为task_struct：</strong>      </p>
+<p>进程标识，进程状态，进程标志，进程环境信息，进程优先级信息，进程调度信息，进程地址空间信息，进程通信信息，进程文件信息，进程信号信息，进程家族信息，进程其他信息。    </p>
+<h4 id="2-5-2-Linux进程描述符分配"><a href="#2-5-2-Linux进程描述符分配" class="headerlink" title="2.5.2 Linux进程描述符分配"></a>2.5.2 Linux进程描述符分配</h4><p>所有的进程描述符记录在数组*task[NR_TASKS]中，默认512，每个进程描述符分配8K空间，7K为进程核心栈。</p>
+<h4 id="2-5-3Linux进程-线程创建和终止"><a href="#2-5-3Linux进程-线程创建和终止" class="headerlink" title="2.5.3Linux进程/线程创建和终止"></a>2.5.3Linux进程/线程创建和终止</h4><h5 id="（1）创建管理进程"><a href="#（1）创建管理进程" class="headerlink" title="（1）创建管理进程"></a>（1）创建管理进程</h5><p> fork（）函数创建一般子进程           </p>
+<p>一次调用，两次返回。          </p>
+<p> copy_on_write。           </p>
+<p>wait()函数和waitpid函数。       </p>
+<h5 id="（2）创建管理线程"><a href="#（2）创建管理线程" class="headerlink" title="（2）创建管理线程"></a>（2）创建管理线程</h5><p>pthread_create（）函数。              </p>
+<p>pthread_join（）函数。                      </p>
+<p>pthread_exit（）函数。</p>
+<h5 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;  </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;  </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="keyword">pid_t</span> childpid;  </span><br><span class="line">         加一句sleep(<span class="number">5</span>);可以使父子进程号不只差<span class="number">1</span>；childpid = fork();  </span><br><span class="line">    <span class="keyword">if</span> (childpid == <span class="number">-1</span>)&#123;  </span><br><span class="line">               perror(<span class="string">&quot;Failed to fork!&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">if</span> (childpid == <span class="number">0</span>)&#123;  </span><br><span class="line">           <span class="built_in">printf</span>(<span class="string">&quot;I am child %ld\n&quot;</span>,(<span class="keyword">long</span>)getpid()); </span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;  </span><br><span class="line">           <span class="built_in">printf</span>(<span class="string">&quot;I am parent %ld\n&quot;</span>,(<span class="keyword">long</span>)getpid());</span><br><span class="line">          <span class="keyword">while</span>(wait(<span class="literal">NULL</span>) &gt; <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">thread_function</span><span class="params">(<span class="keyword">void</span> *arg)</span></span>;</span><br><span class="line"><span class="keyword">char</span> message[] = <span class="string">&quot;Hello World&quot;</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res;</span><br><span class="line">    <span class="keyword">pthread_t</span> a_thread;</span><br><span class="line">    <span class="keyword">void</span> *thread_result;</span><br><span class="line">    <span class="built_in">printf</span>(“Before Message is %s\n”, message);</span><br><span class="line">    res = pthread_create</span><br><span class="line">    (&amp;a_thread, <span class="literal">NULL</span>, thread_function, (<span class="keyword">void</span>*)message);</span><br><span class="line">           <span class="keyword">if</span> (res != <span class="number">0</span>)&#123;</span><br><span class="line">             perror(<span class="string">&quot;Thread creation failed&quot;</span>);</span><br><span class="line">              <span class="built_in">exit</span>(EXIT_FAILURE);</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="built_in">printf</span>(<span class="string">&quot;Waiting for thread to finish...\n&quot;</span>);</span><br><span class="line">           res = pthread_join(a_thread, &amp;thread_result);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Message is now %s\n&quot;</span>, message);</span><br><span class="line">    <span class="built_in">exit</span>(EXIT_SUCCESS);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">thread_function</span><span class="params">(<span class="keyword">void</span> *arg)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Thread_function is runing, Argument was %s\n&quot;</span>, (<span class="keyword">char</span>*)arg);</span><br><span class="line">    sleep(<span class="number">3</span>);</span><br><span class="line">    <span class="built_in">strcpy</span>(message, <span class="string">&quot;Bye&quot;</span>);</span><br><span class="line">      <span class="comment">//通过增加scope属性，创建内核级线程，充分利用多处理器优势。需要考虑虚拟机版本。</span></span><br><span class="line">    pthread_exit(<span class="string">&quot;thank you for the CPU time&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">                                                                                                                                                                                     </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-6-处理器调度"><a href="#2-6-处理器调度" class="headerlink" title="2.6 处理器调度"></a>2.6 处理器调度</h3><h4 id="2-6-1-处理器调度层次"><a href="#2-6-1-处理器调度层次" class="headerlink" title="2.6.1 处理器调度层次"></a>2.6.1 处理器调度层次</h4><h6 id="高级调度：作业调度"><a href="#高级调度：作业调度" class="headerlink" title="高级调度：作业调度"></a>高级调度：作业调度</h6><h6 id="中级调度：平衡调度"><a href="#中级调度：平衡调度" class="headerlink" title="中级调度：平衡调度"></a>中级调度：平衡调度</h6><h6 id="低级调度：进程调度"><a href="#低级调度：进程调度" class="headerlink" title="低级调度：进程调度"></a>低级调度：进程调度</h6><h4 id="2-6-2-选择调度算法原则"><a href="#2-6-2-选择调度算法原则" class="headerlink" title="2.6.2 选择调度算法原则"></a>2.6.2 选择调度算法原则</h4><ol>
+<li><strong>资源利用率</strong>：CPU利用率=CPU有效工作时间/CPU总时间</li>
+<li><strong>吞吐率</strong>：单位时间内CPU处理作业的个数</li>
+<li><strong>公平性</strong>：每个作业获得合理的资源</li>
+<li><strong>响应时间</strong>：交互式进程在分时系统和实时系统下的指标</li>
+<li><strong>周转时间</strong>：批处理系统中一个作业从提交到完成的时间<ul>
+<li>平均作业周转时间  </li>
+<li>平均带权周转时间   </li>
+</ul>
+</li>
+</ol>
+<h4 id="2-6-3-进程调度功能和类型"><a href="#2-6-3-进程调度功能和类型" class="headerlink" title="2.6.3 进程调度功能和类型"></a>2.6.3 进程调度功能和类型</h4><p>进程调度的主要功能：确定就绪态进程使用处理器次序的      </p>
+<p>裁决原则，以及完成具体调度（放弃或占用处理器）工作。      </p>
+<p>调度策略即算法，调度机制即实现方法      </p>
+<p>进程调度的主要类型：剥夺式（preemptive），非剥夺式。    </p>
+<h4 id="2-6-4-进程调度算法"><a href="#2-6-4-进程调度算法" class="headerlink" title="2.6.4 进程调度算法"></a>2.6.4 进程调度算法</h4><h5 id="先来先服务算法（FCFS）"><a href="#先来先服务算法（FCFS）" class="headerlink" title="先来先服务算法（FCFS）"></a>先来先服务算法（FCFS）</h5><h5 id="最短作业优先算法（SJF）"><a href="#最短作业优先算法（SJF）" class="headerlink" title="最短作业优先算法（SJF）"></a>最短作业优先算法（SJF）</h5><h5 id="最短剩余时间优先算法（SRTF）"><a href="#最短剩余时间优先算法（SRTF）" class="headerlink" title="最短剩余时间优先算法（SRTF）"></a>最短剩余时间优先算法（SRTF）</h5><h5 id="最高响应比优先算法（HRRF）："><a href="#最高响应比优先算法（HRRF）：" class="headerlink" title="最高响应比优先算法（HRRF）："></a>最高响应比优先算法（HRRF）：</h5><p>周转时间/处理时间&gt;1      </p>
+<h5 id="优先级调度算法"><a href="#优先级调度算法" class="headerlink" title="优先级调度算法"></a>优先级调度算法</h5><p>（剥夺或非剥夺，静态或动态优先级）      </p>
+<h5 id="轮转调度算法（RR）"><a href="#轮转调度算法（RR）" class="headerlink" title="轮转调度算法（RR）"></a>轮转调度算法（RR）</h5><h5 id="多级反馈队列调度算法（MLFQ，剥夺式）"><a href="#多级反馈队列调度算法（MLFQ，剥夺式）" class="headerlink" title="多级反馈队列调度算法（MLFQ，剥夺式）"></a>多级反馈队列调度算法（MLFQ，剥夺式）</h5><h3 id="2-7-Linux进程调度算法"><a href="#2-7-Linux进程调度算法" class="headerlink" title="2.7 Linux进程调度算法"></a>2.7 Linux进程调度算法</h3><h4 id="2-7-1-Linux-v2-4-进程调度算法"><a href="#2-7-1-Linux-v2-4-进程调度算法" class="headerlink" title="2.7.1 Linux v2.4 进程调度算法"></a>2.7.1 Linux v2.4 进程调度算法</h4><ol>
+<li>基于动态优先级的用户抢占（剥夺）式进程调度</li>
+<li>分为普通进程和实时进程，后者分先进先出和轮转法</li>
+<li>nice普通进程静态优先级，-20—19，值越小优先级越高</li>
+<li>rt_priority实时进程静态优先级，0—99 </li>
+<li>counter是动态优先级，时间片，每10ms减1，6—23</li>
+<li>计算weight=counter+20-nice或者weight=1000+ rt_priority</li>
+<li>选择weight值大的调度，若相同，选择队列前面的调度</li>
+</ol>
+<p>​     若都为0，重新计算所有进程的weight</p>
+<ol>
+<li>核心不可抢占，调度算法简单有效</li>
+<li>核心不可抢占的实时性；更加倾向于I/O密集性进程；</li>
+</ol>
+<p>​              多处理器系统的局限性；调度开销比较大。          </p>
+<h4 id="2-7-2-Linux-v2-6-O（1）进程调度算法"><a href="#2-7-2-Linux-v2-6-O（1）进程调度算法" class="headerlink" title="2.7.2 Linux v2.6 O（1）进程调度算法"></a>2.7.2 Linux v2.6 O（1）进程调度算法</h4><p>1、O（1）复杂度，将调度的集中计算过程分散进行      </p>
+<p>2、强化SMP亲和力      </p>
+<p>3、时钟中断粒度为1ms，称为jiffies      </p>
+<p>4、子进程先于父进程运行      </p>
+<p>5、每个CPU两个队列组：活跃（active）和过期（expired）                  </p>
+<p>每个队列组最多有140个队列，每个队列优先级相同            </p>
+<p>6、增加就绪队列位图提高检索速度            </p>
+<p>7、负载平衡：针对SMP系统            </p>
+<p>8、用户抢占和内核抢占                  </p>
+<p>普通的被动调度称为用户抢占，从内核态返回用户态时                  </p>
+<p>从中断返回内核态时如果条件满足也调度称为内核抢占                                                                                                                                                                                                                                                         </p>
+<p>​                                                                                                                                                                                                                                               </p>
+
+      
+	  
+	  
+	
+	  <div class="declare" hidden="hidden"></div>
+	
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/11/18/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA%E7%AF%87/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-springboot详细讲解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
