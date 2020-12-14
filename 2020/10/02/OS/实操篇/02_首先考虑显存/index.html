@@ -6,25 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://xxakq.github.io">
-  <title>Servlet编程 | Platfrom 9-3/4的博客</title>
+  <title>OS实操篇_首先考虑显存 | Platfrom 9-3/4的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Servlet编程">
+  <meta name="description" content="搞个像模像样的显示界面">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Servlet编程">
-<meta property="og:url" content="https://xxakq.github.io/2019/08/14/javaWEB/Servlet%E7%BC%96%E7%A8%8B/Servlet%E7%BC%96%E7%A8%8B/index.html">
+<meta property="og:title" content="OS实操篇_首先考虑显存">
+<meta property="og:url" content="https://xxakq.github.io/2020/10/02/OS/%E5%AE%9E%E6%93%8D%E7%AF%87/02_%E9%A6%96%E5%85%88%E8%80%83%E8%99%91%E6%98%BE%E5%AD%98/index.html">
 <meta property="og:site_name" content="Platfrom 9-3&#x2F;4的博客">
-<meta property="og:description" content="Servlet编程">
+<meta property="og:description" content="搞个像模像样的显示界面">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201125221509.png">
-<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201125221535.png">
-<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201125221557.png">
-<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201125221603.png">
-<meta property="article:published_time" content="2019-08-14T15:11:04.000Z">
-<meta property="article:modified_time" content="2020-11-25T15:24:16.449Z">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211155818.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211155801.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211160328.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211162033.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211162328.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211162349.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211162819.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211163230.png">
+<meta property="article:published_time" content="2020-10-02T12:31:53.000Z">
+<meta property="article:modified_time" content="2020-12-11T08:38:03.417Z">
 <meta property="article:author" content="Platfrom 9-3&#x2F;">
-<meta property="article:tag" content="javaWEB">
+<meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201125221509.png">
+<meta name="twitter:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211155818.png">
   
     <link rel="alternative" href="/atom.xml" title="Platfrom 9-3/4的博客" type="application/atom+xml">
   
@@ -173,350 +177,180 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-javaWEB/Servlet编程/Servlet编程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-OS/实操篇/02_首先考虑显存" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Servlet编程
+      OS实操篇_首先考虑显存
     </h1>
   
 
         
         
-<a href="/2019/08/14/javaWEB/Servlet%E7%BC%96%E7%A8%8B/Servlet%E7%BC%96%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2019-08-14T15:11:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-14</time>
+<a href="/2020/10/02/OS/%E5%AE%9E%E6%93%8D%E7%AF%87/02_%E9%A6%96%E5%85%88%E8%80%83%E8%99%91%E6%98%BE%E5%AD%98/" class="archive-article-date">
+  	<time datetime="2020-10-02T12:31:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Servlet编程"><a href="#Servlet编程" class="headerlink" title="Servlet编程"></a>Servlet编程</h1><a id="more"></a>
+        <h1 id="搞个像模像样的显示界面"><a href="#搞个像模像样的显示界面" class="headerlink" title="搞个像模像样的显示界面"></a>搞个像模像样的显示界面</h1><a id="more"></a>
 
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201125221509.png"></p>
-<h2 id="1、Servlet-执行过程"><a href="#1、Servlet-执行过程" class="headerlink" title="1、Servlet 执行过程"></a>1、Servlet 执行过程</h2><h3 id="1-1-Servlet简介"><a href="#1-1-Servlet简介" class="headerlink" title="1.1 Servlet简介"></a>1.1 Servlet简介</h3><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201125221535.png"></p>
-<h4 id="1-1-1-servlet说明"><a href="#1-1-1-servlet说明" class="headerlink" title="1.1.1 servlet说明"></a>1.1.1 servlet说明</h4><ul>
-<li>用java语言开发网页动态资源的技术</li>
-</ul>
-<ol>
-<li>Servlet 是 JavaEE 规范之一。规范就是接口 </li>
-<li>Servlet 就 JavaWeb 三大组件之一。三大组件分别是：Servlet 程序、Filter 过滤器、Listener 监听器。 </li>
-<li>Servlet 是运行在服务器上的一个 java 小程序，它可以接收客户端发送过来的请求，并响应数据给客户端。</li>
-</ol>
-<h4 id="1-1-2-servlet特点："><a href="#1-1-2-servlet特点：" class="headerlink" title="1.1.2 servlet特点："></a>1.1.2 servlet特点：</h4><ul>
-<li>servlet就是一个普通的java类，继承HttpServlet类</li>
-<li>一个普通的java类实现了Servlet接口，也叫Servlet程序。我们通常继承HttpServlet是为了创建一个基于http协议的servlet程序。</li>
-<li>servlet程序交给tomcat服务器运行</li>
-</ul>
-<h3 id="1-2-手动实现"><a href="#1-2-手动实现" class="headerlink" title="1.2  手动实现"></a>1.2  手动实现</h3><ol>
-<li><p>编写一个类去实现 Servlet 接口 </p>
-<p>实现 service 方法，处理请求，并响应数据 </p>
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloServlet</span> <span class="keyword">implements</span> <span class="title">Servlet</span> </span>&#123; </span><br><span class="line">  <span class="comment">/*** service 方法是专门用来处理请求和响应的 </span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> servletRequest </span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> servletResponse </span></span><br><span class="line"><span class="comment">       * <span class="doctag">@throws</span> ServletException </span></span><br><span class="line"><span class="comment">       * <span class="doctag">@throws</span> IOException */</span> </span><br><span class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">(ServletRequest servletRequest, ServletResponse servletResponse)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123; </span><br><span class="line">    System.out.println(<span class="string">&quot;Hello Servlet 被访问了&quot;</span>); </span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="一、启用C语言"><a href="#一、启用C语言" class="headerlink" title="一、启用C语言"></a>一、启用C语言</h2><p>​    前面我们用x86汇编语言写了引导记录boot.bin，并让BIOS引导到内存0x07c00处执行成功；我们还用x86汇编语言写了myos的极简版myos.bin，并让boot.bin加载到内存0x08000处执行成功。接下来我们只要在myos.bin的基础上增加操作系统的基本功能就可以了，但myos.bin是用x86汇编语言写的，myos全部用汇编语言写也不是不可以，但这对大家来说是一个挑战。一般操作系统当然要以C语言为主进行开发了，因此这一讲我们讨论x86汇编与C语言的混合编程问题，需要解决以下几个问题。</p>
+<h3 id="1-1-16位代码问题"><a href="#1-1-16位代码问题" class="headerlink" title="1.1 16位代码问题"></a>1.1 16位代码问题</h3><p>一般情况下，NASM会将汇编语言程序汇编成32位代码，由于我们的myos运行在实地址模式下，必须是16位代码，所以要求NASM把汇编语言程序汇编成16位代码，这通过在汇编语言程序中增加BITS 16关键字来实现。同样，GCC一般会把C语言程序编译成32位代码，在我们的myos中也要求C语言程序要编译成16位可执行代码，这通过在C语言程序中增加code16gcc关键字来实现。</p>
+<h3 id="1-2-符号引用问题"><a href="#1-2-符号引用问题" class="headerlink" title="1.2 符号引用问题"></a>1.2 符号引用问题</h3><p>如果要在C语言程序中引用汇编语言程序中的符号（变量和函数），必须在汇编语言程序中用global关键字声明为全局符号，且在符号前加下划线，然后在C语言程序中用extern关键字声明；如果在汇编语言中引用C语言程序中的符号（变量和函数），必须在C语言程序中定义变量和函数，并在符号前加下划线，然后在汇编语言程序中用extern关键字声明，并加双下划线引用。</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211155818.png"></p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211155801.png"></p>
+<h3 id="1-3-参数传递"><a href="#1-3-参数传递" class="headerlink" title="1.3 参数传递"></a>1.3 参数传递</h3><p>调用与被调用之间参数传递时，同时涉及到返回地址的问题，这都涉及到堆栈，由于我们是在16位实地址模式下，问题相对会变得简单。后面具体遇到，我们再讨论。</p>
+<p>这里强调一点。虽然我们汇编或编译的是16位代码，但反汇编的结果却是看到了很多32位代码，这主要是由于Intel公司的兼容政策所导致。我们姑且不较真这些，只要代码能正常运行出来就行。记住以下两点就行：</p>
+<p>如果主调函数是汇编语言编写，同时被调函数是用C语言编写时，我们需要改动主<strong>调函数中的call指令为push指令与jmp指令的组合。即将调用函数跳转回来的地址入栈，然后直接跳转到被调函数的第一条指令即可</strong>。在我们的myos中，我们希望从汇编语言程序中直接跳转到C语言程序中而不再返回，只是在C语言程序中调用汇编语言函数即可。因此正如大家看到的那样，在程序中我们也不需要把返回地址入栈，而是直接跳转就行。</p>
+<p>如果主调函数是用C语言程序编写，同时被调函数是用汇编语言编写时，我们需要在被调函数中的ret指令前添加一个字节，其值为0x66。这点很重要，我们以后可能会大量用到，因为用汇编语言写的函数效率会比较高。</p>
+<h3 id="1-4-尝试使用C语言"><a href="#1-4-尝试使用C语言" class="headerlink" title="1.4 尝试使用C语言"></a>1.4 尝试使用C语言</h3><p>创建myos\myos2，把A.img，boot.asm，writea.exe，nasm.exe复制过来。首先，我们写一个汇编语言程序start.asm，其主要作用是包含了一个打印字符串的函数puts（为简单起见，不传递参数），然后直接调用C语言函数。这里不再解释，直接看代码会更清楚。</p>
+<p><strong>start.asm:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">        EXTERN    __mymain</span><br><span class="line">        GLOBAL    _puts</span><br><span class="line">        GLOBAL    start    </span><br><span class="line">        [BITS    16]</span><br><span class="line">start:</span><br><span class="line">        JMP    contiune</span><br><span class="line">str:    DB    &#39;Hello World from C Language !&#39;,0x0d,0x0a,0</span><br><span class="line">_puts:</span><br><span class="line">        PUSH    AX</span><br><span class="line">        PUSH    BX</span><br><span class="line">        MOV    SI,str</span><br><span class="line">loop1:</span><br><span class="line">        LODSB</span><br><span class="line">        OR    AL,AL</span><br><span class="line">        JZ    loop2</span><br><span class="line">        MOV    AH,0x0e</span><br><span class="line">        MOV    BL,0x09</span><br><span class="line">        INT    0x10</span><br><span class="line">        JMP    loop1</span><br><span class="line">loop2:</span><br><span class="line">        POP    BX</span><br><span class="line">        POP    BX</span><br><span class="line">        DB    0x66</span><br><span class="line">        RET</span><br><span class="line">contiune:</span><br><span class="line">        MOV     AX,    CS</span><br><span class="line">        MOV     DS,    AX</span><br><span class="line">        MOV     ES,    AX</span><br><span class="line">        MOV    AX,    0</span><br><span class="line">        MOV     SS,    AX</span><br><span class="line">        MOV     SP,    0x8000</span><br><span class="line">        JMP    __mymain</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloServlet2</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123; </span><br><span class="line">  <span class="comment">/*** doGet（）在 get 请求的时候调用 </span></span><br><span class="line"><span class="comment">   * <span class="doctag">@throws</span> ServletException </span></span><br><span class="line"><span class="comment">   * <span class="doctag">@throws</span> IOException */</span></span><br><span class="line">  <span class="meta">@Override</span> </span><br><span class="line">  <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;                           System.out.println(<span class="string">&quot;HelloServlet2 的 doGet 方法&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">  <span class="comment">/*** doPost（）在 post 请求的时候调用 </span></span><br><span class="line"><span class="comment">  * <span class="doctag">@throws</span> ServletException </span></span><br><span class="line"><span class="comment">  * <span class="doctag">@throws</span> IOException */</span></span><br><span class="line">  <span class="meta">@Override</span> </span><br><span class="line">  <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;         System.out.println(<span class="string">&quot;HelloServlet2 的 doPost 方法&quot;</span>); </span><br><span class="line">        &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后再写一个C语言程序myos.c，主要包含一个函数mymain，其主要内容就是调用汇编语言编写的函数puts，然后死循环。</p>
+<p><strong>myos.c:</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">__asm__(<span class="string">&quot;.code16gcc\n&quot;</span>);</span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">puts</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">int</span> _mymain()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">puts</span>();</span><br><span class="line">    <span class="keyword">for</span>(;;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<ol start="2">
-<li>到 web.xml 中去配置 servlet 程序的访问地址</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 浏览器访问： http://localhost:8080/day10/hello --&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 配置一个servlet --&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- servlet的配置 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- servlet内部名称。可以自定义 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>HelloServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- servlet类的全名：包名+简单类名 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>gz.itcast.a_servlet.HelloServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">&lt;!-- servlet的映射配置 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- sevlet内部名称。和servlet配置的内部名称保持一致！！ --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>HelloServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- servlet的路径映射。访问servlet的名称 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/hello<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>用如下命令生成我们启用C语言之后的myos.com，注意到myos.com大约9KB（实际上还是不到1KB，这从十六进制编辑器中就能看到），因此boot.asm中要修改读扇区的数量不再是1个扇区，而是17个扇区。</p>
+<p><strong>boot.asm:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">;------------------------------------------------------------------------------------</span><br><span class="line">next:        MOV        AX,0x1000</span><br><span class="line">            MOV        ES,AX</span><br><span class="line">            MOV        BX,0    ; 读到内存0x10000处</span><br><span class="line">            MOV        AH,0x02    ; AH&#x3D;0x02 : 读磁盘</span><br><span class="line">            MOV        DL,0x00    ; 读A驱动器        </span><br><span class="line">            MOV        CH,0    ; 柱面0</span><br><span class="line">            MOV        DH,0    ; 磁头0</span><br><span class="line">            MOV        CL,2    ; 扇区2</span><br><span class="line">            MOV        AL,17    ; 共读17个扇区</span><br><span class="line">            INT        0x13    ; 调用BIOS</span><br><span class="line">            MOV        AX,0x1000</span><br><span class="line">            PUSH        AX</span><br><span class="line">;------------------------------------------------------------------------------------</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-3-Servlet开发过程（url-地址到-Servlet-程序的访问）"><a href="#1-3-Servlet开发过程（url-地址到-Servlet-程序的访问）" class="headerlink" title="1.3 Servlet开发过程（url 地址到 Servlet 程序的访问）"></a>1.3 Servlet开发过程（url 地址到 Servlet 程序的访问）</h3><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201125221557.png"></p>
-<ul>
-<li><strong>前提</strong>： tomcat服务器启动时，会加载%conf%/web.xml文件。然后再加载站点下的每个web应用的web.xml文件。</li>
-<li><strong>http://</strong> 本地hosts文件查询域名和ip的映射,找不到，联网到运营商的DNS服务起器找域名和ip的映射</li>
-<li><strong>8080：</strong>Tomcat端口</li>
-<li><strong>06_servlet：</strong>站点下的web应用名称</li>
-<li><strong>hello：</strong>资源名称。<ol>
-<li>如果读到对应的静态资源文件，那么就把内容返回给浏览器</li>
-<li>如果读不到对应的静态资源文件，那么就返回404的错误页面。</li>
-</ol>
-</li>
-</ul>
-<h2 id="2、Servlet的路径映射"><a href="#2、Servlet的路径映射" class="headerlink" title="2、Servlet的路径映射"></a>2、Servlet的路径映射</h2><p>url-pattern： 表示servlet的路径映射，也叫servlet访问名称。</p>
-<h3 id="2-1-精确匹配"><a href="#2-1-精确匹配" class="headerlink" title="2.1 精确匹配"></a>2.1 精确匹配</h3><ol>
-<li>/demo1                        <a target="_blank" rel="noopener" href="http://localhost:8080/day10/**demo1">http://localhost:8080/day10/**demo1</a>**                    </li>
-<li>/<em>itcast/demo1</em>             <a target="_blank" rel="noopener" href="http://localhost:8080/day10/**itcast/demo1">http://localhost:8080/day10/**itcast/demo1</a>**</li>
-</ol>
-<h3 id="2-2-模糊匹配"><a href="#2-2-模糊匹配" class="headerlink" title="2.2 模糊匹配"></a>2.2 模糊匹配</h3><table>
-<thead>
-<tr>
-<th>样式</th>
-<th>路径</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>/*</td>
-<td><a target="_blank" rel="noopener" href="http://localhost:8080/day10/%E4%BB%BB%E6%84%8F%E8%B7%AF%E5%BE%84">http://localhost:8080/day10/任意路径</a></td>
-</tr>
-<tr>
-<td>/itcast/*</td>
-<td><a target="_blank" rel="noopener" href="http://localhost:8080/day10/itcast/%E4%BB%BB%E6%84%8F%E8%B7%AF%E5%BE%84">http://localhost:8080/day10/itcast/任意路径</a></td>
-</tr>
-<tr>
-<td>后缀   （.do、 .action、.jsf、.html）</td>
-<td><a target="_blank" rel="noopener" href="http://localhost:8080/day10/%E4%BB%BB%E6%84%8F%E8%B7%AF%E5%BE%84.%E5%90%8E%E7%BC%80">http://localhost:8080/day10/任意路径.后缀</a></td>
-</tr>
-</tbody></table>
-<h3 id="2-3-注意事项"><a href="#2-3-注意事项" class="headerlink" title="2.3 注意事项"></a>2.3 注意事项</h3><ol>
-<li>url-pattern要么以/开头，要么以*开头    例如： itcast/demo1错误写法。  </li>
-<li>不能同时使用两种模糊匹配。例如： /itcast/*.html 错误写法</li>
-<li>当多个url-pattern同时符合匹配规则，那么<ul>
-<li>精确匹配的url-pattern会优先被执行。（长的最像的url-pattern优先）</li>
-<li>后缀名结尾的模糊匹配的url-pattern优先级最低</li>
-</ul>
-</li>
-</ol>
-<h2 id="3、Servlet生命周期"><a href="#3、Servlet生命周期" class="headerlink" title="3、Servlet生命周期"></a>3、Servlet生命周期</h2><h3 id="3-1-说明"><a href="#3-1-说明" class="headerlink" title="3.1 说明"></a>3.1 说明</h3><ul>
-<li>平常的java类自己去new对象，自己去使用对象调用。sevlet程序，servlet的生命周期由tomcat服务器控制的。</li>
-</ul>
-<h3 id="3-2-Servlet的四个生命周期"><a href="#3-2-Servlet的四个生命周期" class="headerlink" title="3.2  Servlet的四个生命周期"></a>3.2  Servlet的四个生命周期</h3><ol>
-<li>构造方法： 在创建servlet对象时调用，只调用1次。证明servlet对象在tomcat服务器中是单实例的。</li>
-<li>init方法：在创建完servlet对象后调用，<strong>只调用1次</strong>。</li>
-<li>service方法： 在每次请求servlet时调用，用n次。</li>
-<li>destroy方法： servlet对象销毁时调用只调用1次。tomcat服务器停止或web应用重新部署时调用</li>
-</ol>
-<h3 id="3-3-用伪代码模拟tomcat服务器调用servlet生命周期"><a href="#3-3-用伪代码模拟tomcat服务器调用servlet生命周期" class="headerlink" title="3.3 用伪代码模拟tomcat服务器调用servlet生命周期"></a>3.3 用伪代码模拟tomcat服务器调用servlet生命周期</h3><h4 id="3-3-1-tomcat服务器通过反射构造对象"><a href="#3-3-1-tomcat服务器通过反射构造对象" class="headerlink" title="3.3.1 tomcat服务器通过反射构造对象"></a>3.3.1 tomcat服务器通过反射构造对象</h4><p>得到字节码对象</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class clazz = Class.forName(<span class="string">&quot;浏览器中的地址&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211160328.png"></p>
+<p><strong>GCC进行编译C语言的时候实际执行以下几个命令：汇编、编译、链接（ld）</strong></p>
+<p>ld是MinGw中包含的链接命令，在我们使用的命令中，-s –entry=用于指出目标代码的入口地址（此处是start.asm中start）；-Ttext=用于指出目标代码在内存中的地址（此处是0，实际是0x1000:0x0000）。</p>
+<p>Objcopy也是MinGw中包含的文件复制命令，它可以实现不同格式文件的拷贝，在我们的命令中，-I指出源文件的格式；-O binary指出目标文件的格式为纯二进制文件；-S表示不从源文件中拷贝重定位信息和符号信息到输出文件中。</p>
+<p>MinGW中还有一个有用的命令就是objdump，用来反汇编可执行文件，从而帮助我们调试程序，你可以用以下命令反汇编myos.com</p>
+<p><strong>最终结果：</strong></p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211162033.png"></p>
+<h2 id="二、首先考虑显示"><a href="#二、首先考虑显示" class="headerlink" title="二、首先考虑显示"></a>二、首先考虑显示</h2><h3 id="1-1-显示的基本原理"><a href="#1-1-显示的基本原理" class="headerlink" title="1.1 显示的基本原理"></a>1.1 显示的基本原理</h3><p>屏幕由许多点（像素）组成，不同的点可以显示出不同的颜色。屏幕上的图像就是由不同点的不同颜色组成的。一个屏幕上像素的多少，称之为这个屏幕的分辨率，大小相同的屏幕，分辨率大，则像素数多，单个像素的尺寸小；反之则像素数少，单个像素的尺寸大。常见的分辨率有320<em>200，640</em>480，800<em>600，1024</em>768，1280<em>800，1440</em>900，1680*1050等。</p>
+<p>每个像素的颜色由三原色（红、绿、蓝）组成，显示控制器调整红、绿、蓝的强度就可以使该像素显示多种不同的颜色。计算机中，不同颜色的强度用二进制数表示，比如，某显示器的像素颜色用8位二进制表示，其中用3位表示红的强度，则有8种不同强度的红；用3位表示绿的强度，则有8种不同强度的绿；用剩余2位表示蓝的强度，则有4种不同强度的蓝，这样不同强度的颜色组合，某个像素就可以显示8<em>8</em>4=256种颜色中的一种，事实上，2的8次方就等于256。计算机中，图像的保存方法就是把图像中每个像素的颜色用合适的二进制位数保存起来。显然用于表示每个像素颜色种类的二进制位数越多，则像素能显示的颜色种类就越多，相应的图像就越精彩漂亮！但是反过来，保存精彩图像所需的存储空间也就越大，比如，在计算机中保存一张1024<em>768的24位真彩色图像，就需要1024</em>768*3 =2304 KB的存储空间。</p>
+<p>尽管我们可以用更多的二进制位数来表示颜色的数量，但它总是有限的，而自然界的颜色却是数不尽的！</p>
+<p>我们把想要显示的图像以上述基本原理的方式保存在某个内存区域（称之为显存），然后由显示控制器（图像处理单元GPU）以上述基本原理的方式将图像扫描显示在屏幕上。GPU会循环不断的从显存取出数据并显示，只要显存里的数据发生变化，屏幕上的图像马上就跟着变化，这就是显示的基本原理。</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211162328.png"></p>
+<p>视频其实就是多张图像的连续显示，只有速度达到每秒钟显示50张以上，人眼才不会感觉到闪烁。</p>
+<p>我们可以把字符和文字理解成小的图像就行。</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211162349.png"></p>
+<h3 id="1-2-BIOS之后的显示模式"><a href="#1-2-BIOS之后的显示模式" class="headerlink" title="1.2 BIOS之后的显示模式"></a>1.2 BIOS之后的显示模式</h3><p>GPU把保存在某个显存的图像数据显示在屏幕上，要经过相当复杂的变换和处理，如果我们绕开BIOS直接面对GPU编程，那会把我们大多数人都吓回去的。好在有BIOS，我们必须要感谢写出这些代码的人！</p>
+<p>BIOS设置了几种基本的显示模式，具体参数应该从官方文档获得，百度上可以查阅大概的数据，但不是很准确，因此这里不准备列出，有兴趣的同学可以通过查阅资料测试其他的显示方式。</p>
+<p>BIOS在执行过程中设置的是显示方式3，当从BIOS转入到myos时，myos在运行过程中使用方式3也就足够了，因此在显示初始化时就不设置显示方式了。当然你也可以用以下汇编语句重新设置显示方式，但要注意重新设置显示方式时会清屏。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MOV        AH，0x00</span><br><span class="line">MOV        AL，0x03</span><br><span class="line">INT        0x10</span><br></pre></td></tr></table></figure>
 
-<p>构造对象</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object hello = clazz.newInstance();      <span class="comment">//servlet的构造方法被调用</span></span><br></pre></td></tr></table></figure>
+<p>这里AH中是INT 0x10功能程序的子功能号，表示设置显示方式，AL中是要设置的显示方式编号，从0x00一直到0x13，应该有十几种显示方式（要查官方文档），INT  0x10表示调用BIOS的0x10号功能子程序，即有关显示的功能子程序。</p>
+<p>我们可以直接向显存的对应位置写入字符的ASCII及其属性来实现显示效果，也可以通过BIOS INT 0x10提供的功能来实现相同的效果。下面是INT 0x10的基本服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">0x00    设置显示方式</span><br><span class="line">0x01    设置光标大小</span><br><span class="line">0x02    设置光标位置</span><br><span class="line">0x03    返回光标状态</span><br><span class="line">0x05    选择活动页</span><br><span class="line">0x06    上卷屏幕</span><br><span class="line">0x07    下卷屏幕</span><br><span class="line">0x08    读字符/属性</span><br><span class="line">0x09    显示字符/属性</span><br><span class="line">0x0A    显示字符</span><br><span class="line">0x0B    设置彩色调色板</span><br><span class="line">0x0C    写像素</span><br><span class="line">0x0D    读像素</span><br><span class="line">0x0E    打字方式写</span><br><span class="line">0x0F    取当前显示方式</span><br><span class="line">0x10    存取调色板寄存器</span><br><span class="line">0x11        存取字符发生器</span><br><span class="line">0x12    选择可选例程</span><br><span class="line">0x13    显示字符串</span><br><span class="line">0x14    返回视屏信息</span><br></pre></td></tr></table></figure>
 
-<h4 id="3-3-2-tomcat服务器调用init方法"><a href="#3-3-2-tomcat服务器调用init方法" class="headerlink" title="3.3.2 tomcat服务器调用init方法"></a>3.3.2 tomcat服务器调用init方法</h4><p>得到init方法对象</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Method m = clazz.getDeclareMethod(<span class="string">&quot;init&quot;</span>,ServeletConfig.class);</span><br></pre></td></tr></table></figure>
-
-<p>执行方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m.invoke(hello,config);                <span class="comment">//servlet的init方法被调用</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-3-3-tomcat服务器创建request和response对象，调用service方法"><a href="#3-3-3-tomcat服务器创建request和response对象，调用service方法" class="headerlink" title="3.3.3 tomcat服务器创建request和response对象，调用service方法"></a>3.3.3 tomcat服务器创建request和response对象，调用service方法</h4><p>得到service方法对象</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Method m =                                                            clazz.getDeclareMethod(<span class="string">&quot;service&quot;</span>,HttpServletRequest.class,HttpServletRespnose.class);</span><br></pre></td></tr></table></figure>
-
-<p>执行方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m.invoke(hello,request,response);     <span class="comment">//servlet的service方法被调用</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-3-4-tomcat服务器停止或web应用重新部署时，tomcat服务器调用destroy方法"><a href="#3-3-4-tomcat服务器停止或web应用重新部署时，tomcat服务器调用destroy方法" class="headerlink" title="3.3.4 tomcat服务器停止或web应用重新部署时，tomcat服务器调用destroy方法"></a>3.3.4 tomcat服务器停止或web应用重新部署时，tomcat服务器调用destroy方法</h4><p>得到destroy方法对象 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Method m = clazz.getDeclareMethod(<span class="string">&quot;destroy&quot;</span>,<span class="keyword">null</span>)</span><br></pre></td></tr></table></figure>
-
-<p>执行方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m.invoke(hello,<span class="keyword">null</span>);       <span class="comment">//servlet的destroy方法被调用</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-4-时序图描述servlet执行过程"><a href="#3-4-时序图描述servlet执行过程" class="headerlink" title="3.4 时序图描述servlet执行过程"></a>3.4 时序图描述servlet执行过程</h3><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201125221603.png"></p>
-<h2 id="4、-Servlet线程安全问题"><a href="#4、-Servlet线程安全问题" class="headerlink" title="4、 Servlet线程安全问题"></a>4、 Servlet线程安全问题</h2><h3 id="4-1-servlet对象特点"><a href="#4-1-servlet对象特点" class="headerlink" title="4.1 servlet对象特点"></a>4.1 servlet对象特点</h3><p> 在tomcat服务器中是<strong>单实例多线程</strong>的。多个线程同时操作了Servlet的成员变量（共享数据）。</p>
-<h3 id="4-2-避免Servlet并发问题建议"><a href="#4-2-避免Servlet并发问题建议" class="headerlink" title="4.2 避免Servlet并发问题建议"></a>4.2 避免Servlet并发问题建议</h3><ol>
-<li>尽量不要在servlet类中使用成员变量。</li>
-<li>如果要使用成员变量，那么就要给使用到成员变量的代码块加上代码锁，尽量缩小同步锁的范围，以避免因为同步产生代码并发执行效率降低的问题。</li>
-</ol>
-<h2 id="5、Servlet自动加载"><a href="#5、Servlet自动加载" class="headerlink" title="5、Servlet自动加载"></a>5、Servlet自动加载</h2><p>默认情况下，第一次访问servlet时创建servlet对象。创建对象的过程中会调用构造方法和inti方法。如果init方法的业务逻辑需要消耗比较长的时间，用户的第一次访问servlet时需要等待较长的时间。</p>
-<p>改变servlet对象创建的时机： tomcat服务器启动的时候创建servlet对象。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>LoadDemo2<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>gz.itcast.e_load.LoadDemo2<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 正整数：数值越大，创建对象的优先级越低 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="6、init问题"><a href="#6、init问题" class="headerlink" title="6、init问题"></a>6、init问题</h2><p>在GenericServlet中，有两个init方法。</p>
-<ol>
-<li><p><strong>有参数</strong>的init方法：该方法是servlet的四个生命周期方法中的一个。由tomcat服务器默认调用的初始化方法。在GenericServet的实现中，该方法会调用无参数的init方法。</p>
-</li>
-<li><p><strong>无参数</strong>的init方法：该方法的是Sun公司设计出来用于给开发者去覆盖，用于实现初始化逻辑的方法。</p>
-<p>如果要编写servlet的初始化逻辑，只需要覆盖无参数的init方法即可</p>
-</li>
-</ol>
-<h2 id="7、Servlet中重要对象"><a href="#7、Servlet中重要对象" class="headerlink" title="7、Servlet中重要对象"></a>7、Servlet中重要对象</h2><table>
-<thead>
-<tr>
-<th>对象</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>HttpServletRequest对象</td>
-<td>封装请求信息</td>
-</tr>
-<tr>
-<td>HttpServletResponse对象</td>
-<td>封装响应信息</td>
-</tr>
-<tr>
-<td>ServletConfig对象</td>
-<td>封装一个servlet配置参数信息</td>
-</tr>
-<tr>
-<td>ServletContext对象</td>
-<td>封装web应用环境信息</td>
-</tr>
-</tbody></table>
-<h3 id="7-1-ServletContext对象"><a href="#7-1-ServletContext对象" class="headerlink" title="7.1 ServletContext对象"></a>7.1 ServletContext对象</h3><h4 id="7-1-1-ServletContext对象简介"><a href="#7-1-1-ServletContext对象简介" class="headerlink" title="7.1.1 ServletContext对象简介"></a>7.1.1 ServletContext对象简介</h4><ul>
-<li>ServletContext叫Servlet上下文对象，该对象表示当前的web应用环境信息。一个web应用只会创建一个ServletContext对象。</li>
-</ul>
-<ol>
-<li>ServletContext 是一个接口，它表示 Servlet 上下文对象 </li>
-<li>一个 web 工程，只有一个 ServletContext 对象实例。 </li>
-<li>ServletContext 对象是一个域对象。 </li>
-<li>ServletContext 是在 web 工程部署启动的时候创建。在 web 工程停止的时候销毁。</li>
-</ol>
-<ul>
-<li><p><strong>域对象</strong>，是可以像 Map 一样存取数据的对象，叫域对象。 这里的域指的是存取数据的操作范围，整个 web 工程。主要用于保存数据和获取数据，用于在web应用中不同资源之间共享数据。</p>
-</li>
-<li><p><strong>域对象的作用</strong>： 主要用于保存数据和获取数据，用于在web应用中不同资源之间共享数据。参数形式:  只能传递字符串数据</p>
-<p>Servlet中所有域对象：</p>
-<ol>
-<li>HttpServletRequest对象： request域</li>
-<li>ServletContext对象:            context域</li>
-<li>HttpSession对象：              session域</li>
-</ol>
-<p>Jsp中域对象：PageContext对象： page域</p>
-</li>
-</ul>
+<p>显示方式3是彩色文本显示模式，共有16种颜色，屏幕被划分为80列*25行，能显示2000个字符，显存地址从0xB8000到0xBFFFF，共32KB字节。每个要显示的字符在显存中占2个字节，第一个字节用来保存被显示字符的ASCII码，第二个字节保存被显示字符的颜色，高四位表示背景色，低4位表示前景色，共有16种颜色，如下表所示：</p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>存数据</th>
-<th>取数据</th>
-<th>删除数据</th>
+<th>背景</th>
+<th>前景</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Map</td>
-<td>put()</td>
-<td>get()</td>
-<td>remove()</td>
+<td>BL     R     G     B</td>
+<td>I     R      G       B</td>
 </tr>
 <tr>
-<td>域对象</td>
-<td>setAttribute()</td>
-<td>getAttribute()</td>
-<td>removeAttribute()</td>
+<td>7      6      5      4</td>
+<td>3     2      1       0</td>
 </tr>
 </tbody></table>
-<h4 id="7-1-2-ServletContext-类的四个作用"><a href="#7-1-2-ServletContext-类的四个作用" class="headerlink" title="7.1.2 ServletContext 类的四个作用"></a>7.1.2 ServletContext 类的四个作用</h4><ol>
-<li>获取 web.xml 中配置的上下文参数 context-param </li>
-<li>获取当前的工程路径，格式: /工程路径 </li>
-<li>获取工程部署后在服务器硬盘上的绝对路径 </li>
-<li>像 Map 一样存取数据</li>
-</ol>
-<h5 id="1、演示代码："><a href="#1、演示代码：" class="headerlink" title="1、演示代码："></a>1、演示代码：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123; </span><br><span class="line">  <span class="comment">// 1、获取 web.xml 中配置的上下文参数 context-param </span></span><br><span class="line">  ServletContext context = getServletConfig().getServletContext();      </span><br><span class="line">  String username = context.getInitParameter(<span class="string">&quot;username&quot;</span>);            </span><br><span class="line">  System.out.println(<span class="string">&quot;context-param 参数 username 的值是:&quot;</span> + username); </span><br><span class="line">  System.out.println(<span class="string">&quot;context-param 参数 password 的值是:&quot;</span> + context.getInitParameter(<span class="string">&quot;password&quot;</span>));</span><br><span class="line">  <span class="comment">// 2、获取当前的工程路径，格式: /工程路径</span></span><br><span class="line">  System.out.println( <span class="string">&quot;当前工程路径:&quot;</span> + context.getContextPath() );   <span class="comment">// 3、获取工程部署后在服务器硬盘上的绝对路径 </span></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * / 斜杠被服务器解析地址为:http://ip:port/工程名/ 映射到 IDEA 代码的 web 目录&lt;br/&gt; </span></span><br><span class="line"><span class="comment">    */</span> </span><br><span class="line">   System.out.println(<span class="string">&quot;工程部署的路径是:&quot;</span> + context.getRealPath(<span class="string">&quot;/&quot;</span>));</span><br><span class="line">   System.out.println(<span class="string">&quot;工程下 css 目录的绝对路径是:&quot;</span> + context.getRealPath(<span class="string">&quot;/css&quot;</span>)); </span><br><span class="line">   System.out.println(<span class="string">&quot;工程下 imgs 目录 1.jpg 的绝对路径是:&quot;</span> + context.getRealPath(<span class="string">&quot;/imgs/1.jpg&quot;</span>)); &#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="2、web-xml-配置"><a href="#2、web-xml-配置" class="headerlink" title="2、web.xml 配置"></a>2、web.xml 配置</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--context-param 是上下文参数(它属于整个 web 工程)--&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>username<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>context<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span> </span><br><span class="line"><span class="comment">&lt;!--context-param 是上下文参数(它属于整个 web 工程)--&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>password<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>root<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="3、-ServletContext存取数据："><a href="#3、-ServletContext存取数据：" class="headerlink" title="3、 ServletContext存取数据："></a>3、 ServletContext存取数据：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * ContextServlet1，写入内容</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ContextServlet1</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123; </span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123; </span><br><span class="line">    <span class="comment">// 获取 ServletContext 对象 </span></span><br><span class="line">    ServletContext context = getServletContext();                                                        System.out.println(context); </span><br><span class="line">    System.out.println(<span class="string">&quot;保存之前: Context1 获取 key1 的值是:&quot;</span>+                                       context.getAttribute(<span class="string">&quot;key1&quot;</span>)); </span><br><span class="line">    context.setAttribute(<span class="string">&quot;key1&quot;</span>, <span class="string">&quot;value1&quot;</span>);                                                         System.out.println(<span class="string">&quot;Context1 中获取域数据 key1 的值是:&quot;</span>+ context.getAttribute(<span class="string">&quot;key1&quot;</span>)); &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * ContextServlet2，读取内容</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123; </span><br><span class="line">    ServletContext context = getServletContext();</span><br><span class="line">    System.out.println(context); </span><br><span class="line">      System.out.println(<span class="string">&quot;Context2 中获取域数据 key1 的值是:&quot;</span>+ context.getAttribute(<span class="string">&quot;key1&quot;</span>)); &#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="7-1-3-ServletContext对象的常用方法"><a href="#7-1-3-ServletContext对象的常用方法" class="headerlink" title="7.1.3 ServletContext对象的常用方法"></a>7.1.3 ServletContext对象的常用方法</h4><h5 id="1、得到web应用的上下文路径"><a href="#1、得到web应用的上下文路径" class="headerlink" title="1、得到web应用的上下文路径"></a>1、得到web应用的上下文路径</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//得到web应用上下路径。也就是部署到tomcat服务器上运行的web应用名称。</span></span><br><span class="line">java.lang.<span class="function">String         <span class="title">getContextPath</span><span class="params">()</span> </span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2、得到web应用的全局参数（所有servlet有效的！！）"><a href="#2、得到web应用的全局参数（所有servlet有效的！！）" class="headerlink" title="2、得到web应用的全局参数（所有servlet有效的！！）"></a>2、得到web应用的全局参数（所有servlet有效的！！）</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java.lang.<span class="function">String         <span class="title">getInitParameter</span><span class="params">(java.lang.String name)</span>  </span></span><br><span class="line"><span class="function">java.util.Enumeration      <span class="title">getInitParameterNames</span><span class="params">()</span> </span></span><br></pre></td></tr></table></figure>
-
-<h5 id="3、域对象相关的方法"><a href="#3、域对象相关的方法" class="headerlink" title="3、域对象相关的方法"></a>3、域对象相关的方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setAttribute</span><span class="params">(java.lang.String name, java.lang.Object object)</span> <span class="comment">//保存数据</span></span></span><br><span class="line"><span class="function">java.lang.Object <span class="title">getAttribute</span><span class="params">(java.lang.String name)</span>                <span class="comment">//得到数据</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">removeAttribute</span><span class="params">(java.lang.String name)</span>                       <span class="comment">//清除数据</span></span></span><br></pre></td></tr></table></figure>
-
-<h5 id="4、转发相关的"><a href="#4、转发相关的" class="headerlink" title="4、转发相关的"></a>4、转发相关的</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">response.sendRedirect(路径);                               <span class="comment">//请求重定向</span></span><br><span class="line"><span class="comment">// 在servlet中实现页面跳转 </span></span><br><span class="line">RequestDispatcher </span><br><span class="line">getRequestDispatcher(java.lang.String path)  </span><br><span class="line">request.getRequestDispacher(路径).forward(request,respone); <span class="comment">//请求转发</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="5、web应用读取资源文件"><a href="#5、web应用读取资源文件" class="headerlink" title="5、web应用读取资源文件"></a>5、web应用读取资源文件</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">java.lang.<span class="function">String            <span class="title">getRealPath</span><span class="params">(java.lang.String path)</span>  </span></span><br><span class="line"><span class="function">java.io.InputStream        <span class="title">getResourceAsStream</span><span class="params">(java.lang.String path)</span></span></span><br><span class="line"><span class="function"> <span class="comment">//不同资源</span></span></span><br><span class="line"><span class="function">   <span class="comment">//web应用内部资源。在当前web应用中的资源</span></span></span><br><span class="line"><span class="function">   <span class="comment">//其他web应用资源。在同一个站点下的其他web应用的资源</span></span></span><br><span class="line"><span class="function">   <span class="comment">//站点外的资源。其他站点下的资源</span></span></span><br></pre></td></tr></table></figure>
-
-<h5 id="6、请求重定向和请求转发区别"><a href="#6、请求重定向和请求转发区别" class="headerlink" title="6、请求重定向和请求转发区别"></a>6、请求重定向和请求转发区别</h5><table>
+<p>其中BL表示是否闪烁，I表示正常亮度或高亮度。具体颜色数值如下表所示： </p>
+<table>
 <thead>
 <tr>
-<th>请求重定向</th>
-<th>请求转发</th>
+<th>颜色</th>
+<th>R</th>
+<th>G</th>
+<th>B</th>
+<th>HEX</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>地址栏改变，改变为重定向到地址</td>
-<td>地址栏不会改变</td>
+<td>黑</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 </tr>
 <tr>
-<td>可以重定向到当前web应用，其他web应用，甚至是其他站点资源</td>
-<td>只能转发到当前web应用内部资源</td>
+<td>蓝</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr>
-<td>两次不同的请求。不可以使用request域对象来共享数据</td>
-<td>同一次请求。可以使用request域对象来共享数据</td>
+<td>绿</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>青</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>红</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>品红</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>棕</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td>白</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>7</td>
 </tr>
 </tbody></table>
-<h3 id="7-2-ServletConfig对象"><a href="#7-2-ServletConfig对象" class="headerlink" title="7.2 ServletConfig对象"></a>7.2 ServletConfig对象</h3><p>ServletConfig 类是 Servlet 程序的配置信息类。 Servlet 程序和 ServletConfig 对象都是由 Tomcat 负责创建，我们负责使用。 Servlet 程序默认是第一次访问的时候创建，ServletConfig 是每个 Servlet 程序创建时，就创建一个对应的ServletConfig 对象。</p>
-<h4 id="7-2-1-ServletConfig-类的三大作用"><a href="#7-2-1-ServletConfig-类的三大作用" class="headerlink" title="7.2.1 ServletConfig 类的三大作用"></a>7.2.1 ServletConfig 类的三大作用</h4><ol>
-<li>可以获取 Servlet 程序的别名 servlet-name 的值 </li>
-<li>取初始化参数 init-param </li>
-<li>获取 ServletContext 对象</li>
-</ol>
-<h4 id="7-2-2-使用"><a href="#7-2-2-使用" class="headerlink" title="7.2.2 使用"></a>7.2.2 使用</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- XML配置 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- servlet 标签给 Tomcat 配置 Servlet 程序 --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span> </span><br><span class="line">  <span class="comment">&lt;!--servlet-name 标签 Servlet 程序起一个别名（一般是类名） --&gt;</span>               </span><br><span class="line">      <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>HelloServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--servlet-class 是 Servlet 程序的全类名--&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>com.atguigu.servlet.HelloServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span> <span class="comment">&lt;!--init-param 是初始化参数--&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">init-param</span>&gt;</span> </span><br><span class="line">    <span class="comment">&lt;!--是参数名--&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>username<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span> </span><br><span class="line">    <span class="comment">&lt;!--是参数值--&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>root<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span> </span><br><span class="line">  <span class="comment">&lt;!--init-param 是初始化参数--&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">init-param</span>&gt;</span> </span><br><span class="line">    <span class="comment">&lt;!--是参数名--&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>url<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span> </span><br><span class="line">    <span class="comment">&lt;!--是参数值--&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>jdbc:mysql://localhost:3306/test<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span>       <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--servlet-mapping 标签给 servlet 程序配置访问地址--&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span> </span><br><span class="line">      <span class="comment">&lt;!--servlet-name 标签的作用是告诉服务器，我当前配置的地址给哪个 Servlet 程序使用--&gt;</span> </span><br><span class="line">          <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>HelloServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span> </span><br><span class="line">      <span class="comment">&lt;!--url-pattern 标签配置访问地址 &lt;br/&gt; / 斜杠在服务器解析的时候，表示地址为：http://ip:port/工程路径 &lt;br/&gt; /hello 表示地址为：http://ip:port/工程路径/hello &lt;br/&gt; --&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/hello<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span> </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig servletConfig)</span> <span class="keyword">throws</span> ServletException </span>&#123; </span><br><span class="line">  System.out.println(<span class="string">&quot;2 init 初始化方法&quot;</span>); </span><br><span class="line">  <span class="comment">// 1、可以获取 Servlet 程序的别名 servlet-name 的值     </span></span><br><span class="line">  System.out.println(<span class="string">&quot;HelloServlet 程序的别名是:&quot;</span> + servletConfig.getServletName());</span><br><span class="line">  <span class="comment">// 2、获取初始化参数 init-param </span></span><br><span class="line">  System.out.println(<span class="string">&quot;初始化参数 username 的值是;&quot;</span> +                                        servletConfig.getInitParameter(<span class="string">&quot;username&quot;</span>)); </span><br><span class="line">  System.out.println(<span class="string">&quot;初始化参数 url 的值是;&quot;</span> + servletConfig.getInitParameter(<span class="string">&quot;url&quot;</span>)); <span class="comment">// </span></span><br><span class="line">  <span class="comment">//3、获取 ServletContext 对象                                      </span></span><br><span class="line">  System.out.println(servletConfig.getServletContext()); &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>注意：重写init()方法里面一定要调用父类的init(ServletConfig)操作，子类重写了init()方法，在调用init()方法的时候会直接调用子类的方法 </li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父类的init()方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig config)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.config = config;</span><br><span class="line">    <span class="keyword">this</span>.init();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>显示1屏幕的字符需要占用显存4000个字节，大约4KB（4096），这样算来，32KB显存可以保存8屏幕的显示内容。以4KB为单位把显存共分为8页（第0页到第7页），每页保存1屏幕的显示数据（最后96个字节弃用），BIOS默认显示第0页，可以编程设置当前要显示的页。</p>
+<p>第0页屏幕左上角第0行第0列位置要显示的字符保存在0xB800:0x0000和0xB800: 0x0001处；第0页屏幕右上角第0行第79列位置要显示的字符保存在0xB800:158和0xB800: 159处。</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211162819.png"></p>
+<p>还要强调一点，把字符的ASCII码送到显存的某个字节，真正显示出来的是这个字符的形状，这中间需要一个字符发生器，把字符的ASCII码转换成点阵，这点阵称为这个字符的字形码。虽然我们可能不涉及，但原理要清楚。BIOS提供了不同的字形码，比如8<em>8、8</em>14和8*16等，也可以使用用户的字形码，这通过INT 0x10的0x11子功能去实现。</p>
+<h3 id="1-3-设计myos的显示界面"><a href="#1-3-设计myos的显示界面" class="headerlink" title="1.3 设计myos的显示界面"></a>1.3 设计myos的显示界面</h3><p>把myos2复制一份，重新命名为myos3。</p>
+<p>boot.asm修改如下，少显示一空行，字符串前加一空格。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msg:    DB        0x0a</span><br><span class="line">        DB        &quot; Booting from Flopppy!&quot;</span><br><span class="line">        DB        0x0a</span><br></pre></td></tr></table></figure>
+
+<p>start.asm修改如下。取消显示字符串的函数puts，该程序的功能目前只是设置堆栈，然后跳转到C程序即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    EXTERN    __mymain</span><br><span class="line">    GLOBAL    start    </span><br><span class="line">    [BITS    16]</span><br><span class="line">start:</span><br><span class="line">    JMP    contiune</span><br><span class="line">contiune:</span><br><span class="line">    MOV     AX,    CS</span><br><span class="line">    MOV     DS,    AX</span><br><span class="line">    MOV     ES,    AX</span><br><span class="line">    MOV    AX,    0</span><br><span class="line">    MOV     SS,    AX</span><br><span class="line">    MOV     SP,    0x8000</span><br><span class="line">    JMP    __mymain</span><br></pre></td></tr></table></figure>
+
+<p>把设置屏幕界面的功能函数单独放在文件display.asm中，函数名为initdisplay。程序虽长，但很简单。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">    GLOBAL    _initdisplay</span><br><span class="line">    [BITS    16]</span><br><span class="line">_initdisplay:</span><br><span class="line">        PUSH        AX</span><br><span class="line">        PUSH        BX</span><br><span class="line">        PUSH        CX</span><br><span class="line">        PUSH        DX</span><br><span class="line">        PUSH        SI</span><br><span class="line">        PUSH        ES</span><br><span class="line">        MOV        AH,0x01</span><br><span class="line">        MOV        CH,00</span><br><span class="line">        MOV        CL,14</span><br><span class="line">        INT            0x10        ;设置光标大小</span><br><span class="line">        MOV        AH,0x02</span><br><span class="line">        MOV        BH,0</span><br><span class="line">        MOV        DH,02</span><br><span class="line">        MOV        DL,04</span><br><span class="line">        INT            0x10        ;设置光标位置    </span><br><span class="line">        MOV        AX,0xb800</span><br><span class="line">        MOV        ES,AX</span><br><span class="line">        MOV        SI,0</span><br><span class="line">loop:    MOV        byte [ES:SI],&#39;-&#39;</span><br><span class="line">        INC            SI</span><br><span class="line">        MOV        byte [ES:SI],0x07</span><br><span class="line">        INC            SI</span><br><span class="line">        CMP        SI,160</span><br><span class="line">        JNZ            loop</span><br><span class="line">        MOV        SI,159</span><br><span class="line">loop1:    ADD        SI,1</span><br><span class="line">        MOV        byte [ES:SI],&#39;|&#39;</span><br><span class="line">        INC            SI</span><br><span class="line">        MOV        byte [ES:SI],0x07</span><br><span class="line">        ADD        SI,157</span><br><span class="line">        MOV        byte [ES:SI],&#39;|&#39;</span><br><span class="line">        INC            SI</span><br><span class="line">        MOV        byte [ES:SI],0x07</span><br><span class="line">        CMP        SI,3839</span><br><span class="line">        JNZ            loop1</span><br><span class="line">        MOV        SI,24*160</span><br><span class="line">loop2:    MOV        byte [ES:SI],&#39;-&#39;</span><br><span class="line">        INC            SI</span><br><span class="line">        MOV        byte [ES:SI],0x07</span><br><span class="line">        INC            SI</span><br><span class="line">        CMP        SI,24*160+160</span><br><span class="line">        JNZ            loop2</span><br><span class="line">        MOV        SI,2*160+2</span><br><span class="line">        MOV        byte [ES:SI],&#39;A&#39;</span><br><span class="line">        INC            SI</span><br><span class="line">        MOV        byte [ES:SI],0x07</span><br><span class="line">        INC            SI</span><br><span class="line">        MOV        byte [ES:SI],&#39;:&#39;</span><br><span class="line">        INC            SI</span><br><span class="line">        MOV        byte [ES:SI],0x07</span><br><span class="line">        INC            SI</span><br><span class="line">        MOV        byte [ES:SI],&#39;&gt;&#39;</span><br><span class="line">        INC            SI</span><br><span class="line">        MOV        byte [ES:SI],0x07</span><br><span class="line">        POP            ES</span><br><span class="line">        POP            SI</span><br><span class="line">        POP            DX</span><br><span class="line">        POP            CX</span><br><span class="line">        POP            BX</span><br><span class="line">        POP            AX</span><br><span class="line">        DB            0x66</span><br><span class="line">        RET</span><br></pre></td></tr></table></figure>
+
+<p>myos.c一如既往地简单，只是调用了initdisplay，然后就死循环。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">__asm__(<span class="string">&quot;.code16gcc\n&quot;</span>);</span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">initdisplay</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">int</span> _mymain()</span><br><span class="line">&#123;</span><br><span class="line">    initdisplay();</span><br><span class="line">    <span class="keyword">for</span>(;;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>cmd窗口提供了执行批处理文件的功能，具体做法是把上述命令按顺序依次写在一个文本文件中，保存该文件时扩展名为bat，如a.bat，然后在cmd命令行直接输入a.bat回车，就可以按顺序自动执行改文件中的每一行命令。如下所示：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nasm boot.asm <span class="literal">-o</span> boot.bin</span><br><span class="line">nasm <span class="operator">-f</span> elf start.asm <span class="literal">-o</span> start.o</span><br><span class="line">nasm <span class="operator">-f</span> elf display.asm <span class="literal">-o</span> display.o </span><br><span class="line">gcc <span class="literal">-c</span> myos.c <span class="literal">-o</span> myos.o </span><br><span class="line">ld <span class="literal">-s</span> -<span class="literal">-entry</span>=<span class="built_in">start</span> <span class="literal">-Ttext</span>=<span class="number">0</span>x0 start.o display.o myos.o <span class="literal">-o</span> myos.elf </span><br><span class="line">objcopy <span class="literal">-I</span> elf32<span class="literal">-i386</span> <span class="literal">-O</span> binary <span class="literal">-S</span> myos.elf myos.com</span><br><span class="line">writea boot.bin A.img <span class="number">1</span></span><br><span class="line">writea myos.com A.img <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-最终结果："><a href="#1-4-最终结果：" class="headerlink" title="1.4 最终结果："></a>1.4 最终结果：</h3><p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211163230.png"></p>
 
       
 
@@ -564,7 +398,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaWEB</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
         		</li>
       		
 		</ul>
@@ -620,7 +454,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://xxakq.github.io/2019/08/14/javaWEB/Servlet%E7%BC%96%E7%A8%8B/Servlet%E7%BC%96%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://xxakq.github.io/2020/10/02/OS/%E5%AE%9E%E6%93%8D%E7%AF%87/02_%E9%A6%96%E5%85%88%E8%80%83%E8%99%91%E6%98%BE%E5%AD%98/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -634,15 +468,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/14/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F_%E7%BC%93%E5%AD%98%E7%AF%87/%E5%88%86%E5%B8%83%E5%BC%8F_%E7%BC%93%E5%AD%98%E7%AF%87/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/01/OS/%E7%90%86%E8%AE%BA%E7%AF%87/01_%E8%B5%B0%E8%BF%9B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          分布式-缓存篇
+          OS理论篇_概述和处理器
         
       </div>
     </a>
   
+  
+    <a href="/2020/10/01/OS/%E5%AE%9E%E6%93%8D%E7%AF%87/01_%E4%BB%8E%E5%BC%95%E5%AF%BC%E5%BC%80%E5%A7%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OS实操篇_从引导开始</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -667,7 +506,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Servlet%E7%BC%96%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Servlet编程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81Servlet-%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">1、Servlet 执行过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Servlet%E7%AE%80%E4%BB%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.1 Servlet简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1-servlet%E8%AF%B4%E6%98%8E"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">1.1.1 servlet说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2-servlet%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">1.1.2 servlet特点：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2  手动实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Servlet%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%EF%BC%88url-%E5%9C%B0%E5%9D%80%E5%88%B0-Servlet-%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%AE%BF%E9%97%AE%EF%BC%89"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.3 Servlet开发过程（url 地址到 Servlet 程序的访问）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81Servlet%E7%9A%84%E8%B7%AF%E5%BE%84%E6%98%A0%E5%B0%84"><span class="toc-number">1.3.</span> <span class="toc-text">2、Servlet的路径映射</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%B2%BE%E7%A1%AE%E5%8C%B9%E9%85%8D"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.1 精确匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%A8%A1%E7%B3%8A%E5%8C%B9%E9%85%8D"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.2 模糊匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3 注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.4.</span> <span class="toc-text">3、Servlet生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E8%AF%B4%E6%98%8E"><span class="toc-number">1.4.1.</span> <span class="toc-text">3.1 说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Servlet%E7%9A%84%E5%9B%9B%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.4.2.</span> <span class="toc-text">3.2  Servlet的四个生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E7%94%A8%E4%BC%AA%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%8B%9Ftomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B0%83%E7%94%A8servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.3 用伪代码模拟tomcat服务器调用servlet生命周期</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-1-tomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E6%9E%84%E9%80%A0%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">3.3.1 tomcat服务器通过反射构造对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-2-tomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B0%83%E7%94%A8init%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">3.3.2 tomcat服务器调用init方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-3-tomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9B%E5%BB%BArequest%E5%92%8Cresponse%E5%AF%B9%E8%B1%A1%EF%BC%8C%E8%B0%83%E7%94%A8service%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.3.3.</span> <span class="toc-text">3.3.3 tomcat服务器创建request和response对象，调用service方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-4-tomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%81%9C%E6%AD%A2%E6%88%96web%E5%BA%94%E7%94%A8%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2%E6%97%B6%EF%BC%8Ctomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B0%83%E7%94%A8destroy%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.3.4.</span> <span class="toc-text">3.3.4 tomcat服务器停止或web应用重新部署时，tomcat服务器调用destroy方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%97%B6%E5%BA%8F%E5%9B%BE%E6%8F%8F%E8%BF%B0servlet%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">1.4.4.</span> <span class="toc-text">3.4 时序图描述servlet执行过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81-Servlet%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="toc-number">1.5.</span> <span class="toc-text">4、 Servlet线程安全问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-servlet%E5%AF%B9%E8%B1%A1%E7%89%B9%E7%82%B9"><span class="toc-number">1.5.1.</span> <span class="toc-text">4.1 servlet对象特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E9%81%BF%E5%85%8DServlet%E5%B9%B6%E5%8F%91%E9%97%AE%E9%A2%98%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.5.2.</span> <span class="toc-text">4.2 避免Servlet并发问题建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81Servlet%E8%87%AA%E5%8A%A8%E5%8A%A0%E8%BD%BD"><span class="toc-number">1.6.</span> <span class="toc-text">5、Servlet自动加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81init%E9%97%AE%E9%A2%98"><span class="toc-number">1.7.</span> <span class="toc-text">6、init问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81Servlet%E4%B8%AD%E9%87%8D%E8%A6%81%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.</span> <span class="toc-text">7、Servlet中重要对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-ServletContext%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.1.</span> <span class="toc-text">7.1 ServletContext对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-1-ServletContext%E5%AF%B9%E8%B1%A1%E7%AE%80%E4%BB%8B"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">7.1.1 ServletContext对象简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-2-ServletContext-%E7%B1%BB%E7%9A%84%E5%9B%9B%E4%B8%AA%E4%BD%9C%E7%94%A8"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">7.1.2 ServletContext 类的四个作用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E6%BC%94%E7%A4%BA%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-number">1.8.1.2.1.</span> <span class="toc-text">1、演示代码：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81web-xml-%E9%85%8D%E7%BD%AE"><span class="toc-number">1.8.1.2.2.</span> <span class="toc-text">2、web.xml 配置</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81-ServletContext%E5%AD%98%E5%8F%96%E6%95%B0%E6%8D%AE%EF%BC%9A"><span class="toc-number">1.8.1.2.3.</span> <span class="toc-text">3、 ServletContext存取数据：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-3-ServletContext%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.8.1.3.</span> <span class="toc-text">7.1.3 ServletContext对象的常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E5%BE%97%E5%88%B0web%E5%BA%94%E7%94%A8%E7%9A%84%E4%B8%8A%E4%B8%8B%E6%96%87%E8%B7%AF%E5%BE%84"><span class="toc-number">1.8.1.3.1.</span> <span class="toc-text">1、得到web应用的上下文路径</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E5%BE%97%E5%88%B0web%E5%BA%94%E7%94%A8%E7%9A%84%E5%85%A8%E5%B1%80%E5%8F%82%E6%95%B0%EF%BC%88%E6%89%80%E6%9C%89servlet%E6%9C%89%E6%95%88%E7%9A%84%EF%BC%81%EF%BC%81%EF%BC%89"><span class="toc-number">1.8.1.3.2.</span> <span class="toc-text">2、得到web应用的全局参数（所有servlet有效的！！）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%E3%80%81%E5%9F%9F%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.8.1.3.3.</span> <span class="toc-text">3、域对象相关的方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4%E3%80%81%E8%BD%AC%E5%8F%91%E7%9B%B8%E5%85%B3%E7%9A%84"><span class="toc-number">1.8.1.3.4.</span> <span class="toc-text">4、转发相关的</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5%E3%80%81web%E5%BA%94%E7%94%A8%E8%AF%BB%E5%8F%96%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number">1.8.1.3.5.</span> <span class="toc-text">5、web应用读取资源文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6%E3%80%81%E8%AF%B7%E6%B1%82%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91%E5%8C%BA%E5%88%AB"><span class="toc-number">1.8.1.3.6.</span> <span class="toc-text">6、请求重定向和请求转发区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-ServletConfig%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.2.</span> <span class="toc-text">7.2 ServletConfig对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-1-ServletConfig-%E7%B1%BB%E7%9A%84%E4%B8%89%E5%A4%A7%E4%BD%9C%E7%94%A8"><span class="toc-number">1.8.2.1.</span> <span class="toc-text">7.2.1 ServletConfig 类的三大作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-2-%E4%BD%BF%E7%94%A8"><span class="toc-number">1.8.2.2.</span> <span class="toc-text">7.2.2 使用</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%90%9E%E4%B8%AA%E5%83%8F%E6%A8%A1%E5%83%8F%E6%A0%B7%E7%9A%84%E6%98%BE%E7%A4%BA%E7%95%8C%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text">搞个像模像样的显示界面</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%90%AF%E7%94%A8C%E8%AF%AD%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">一、启用C语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-16%E4%BD%8D%E4%BB%A3%E7%A0%81%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 16位代码问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 符号引用问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 参数传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%B0%9D%E8%AF%95%E4%BD%BF%E7%94%A8C%E8%AF%AD%E8%A8%80"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4 尝试使用C语言</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%A6%96%E5%85%88%E8%80%83%E8%99%91%E6%98%BE%E7%A4%BA"><span class="toc-number">1.2.</span> <span class="toc-text">二、首先考虑显示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%98%BE%E7%A4%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.1 显示的基本原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-BIOS%E4%B9%8B%E5%90%8E%E7%9A%84%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2 BIOS之后的显示模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E8%AE%BE%E8%AE%A1myos%E7%9A%84%E6%98%BE%E7%A4%BA%E7%95%8C%E9%9D%A2"><span class="toc-number">1.2.3.</span> <span class="toc-text">1.3 设计myos的显示界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E6%9C%80%E7%BB%88%E7%BB%93%E6%9E%9C%EF%BC%9A"><span class="toc-number">1.2.4.</span> <span class="toc-text">1.4 最终结果：</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>

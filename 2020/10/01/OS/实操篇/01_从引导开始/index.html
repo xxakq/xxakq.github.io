@@ -6,18 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://xxakq.github.io">
-  <title>Archives: 2020/4 | Platfrom 9-3/4的博客</title>
+  <title>OS实操篇_从引导开始 | Platfrom 9-3/4的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Platfrom 9-3&#x2F;4的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Platfrom 9-3&#x2F;4的博客">
-<meta property="og:url" content="https://xxakq.github.io/archives/2020/04/index.html">
+  <meta name="description" content="一切的一切，从引导开始，并去加载我们的操作系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OS实操篇_从引导开始">
+<meta property="og:url" content="https://xxakq.github.io/2020/10/01/OS/%E5%AE%9E%E6%93%8D%E7%AF%87/01_%E4%BB%8E%E5%BC%95%E5%AF%BC%E5%BC%80%E5%A7%8B/index.html">
 <meta property="og:site_name" content="Platfrom 9-3&#x2F;4的博客">
-<meta property="og:description" content="Platfrom 9-3&#x2F;4的博客">
+<meta property="og:description" content="一切的一切，从引导开始，并去加载我们的操作系统">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211122150.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211145339.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211145455.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211153359.png">
+<meta property="og:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211153157.png">
+<meta property="article:published_time" content="2020-10-01T12:31:53.000Z">
+<meta property="article:modified_time" content="2020-12-11T07:53:57.737Z">
 <meta property="article:author" content="Platfrom 9-3&#x2F;">
-<meta property="article:tag" content="技术记录">
+<meta property="article:tag" content="操作系统">
+<meta property="article:tag" content="BIOS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211122150.png">
   
     <link rel="alternative" href="/atom.xml" title="Platfrom 9-3/4的博客" type="application/atom+xml">
   
@@ -166,73 +175,341 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-OS/实操篇/01_从引导开始" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/12/java/javaSE_JUC%E7%AF%87/javaSE-JUC%E7%AF%87/" class="archive-article-date">
-  	<time datetime="2020-04-12T04:23:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/12/java/javaSE_JUC%E7%AF%87/javaSE-JUC%E7%AF%87/">javaSE-JUC篇</a>
+    <h1 class="article-title" itemprop="name">
+      OS实操篇_从引导开始
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+<a href="/2020/10/01/OS/%E5%AE%9E%E6%93%8D%E7%AF%87/01_%E4%BB%8E%E5%BC%95%E5%AF%BC%E5%BC%80%E5%A7%8B/" class="archive-article-date">
+  	<time datetime="2020-10-01T12:31:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一切的一切，从引导开始，并去加载我们的操作系统"><a href="#一切的一切，从引导开始，并去加载我们的操作系统" class="headerlink" title="一切的一切，从引导开始，并去加载我们的操作系统"></a>一切的一切，从引导开始，并去加载我们的操作系统</h1><a id="more"></a>
+
+<h2 id="一、都从引导开始！"><a href="#一、都从引导开始！" class="headerlink" title="一、都从引导开始！"></a>一、都从引导开始！</h2><h3 id="1-、计算机系统的启动过程"><a href="#1-、计算机系统的启动过程" class="headerlink" title="1 、计算机系统的启动过程"></a>1 、计算机系统的启动过程</h3><p>冯·诺依曼型计算机的基本工作原理可以概括为两句话：<code>存储程序</code>，<code>程序控制</code>。</p>
+<blockquote>
+<p>存储程序是指用户将解决问题的过程以程序的形式存储在计算机的存储器中；</p>
+</blockquote>
+<blockquote>
+<p>程序控制是指计算机所做的所有事情都是通过CPU（central processing unit，中央处理器）执行程序来实现的。</p>
+</blockquote>
+<p>因此，一个计算机系统的硬件只要有CPU和内存，这个计算机系统就可以正常工作了，其中内存负责存储程序，CPU负责执行程序。</p>
+<p>计算机系统一上电，CPU就开始执行程序，CPU执行程序的过程就是从内存里面取一条指令，然后执行这条指令，然后再取下一条指令，然后再执行这条指令，……，循环往复，直至关机。理论上讲，CPU只会一条指令接一条指令的执行程序，其他什么都不会干。</p>
+<p>以下叙述以x86（Intel的8086系列计算机）系统为例，其他系统如ARM等也都类似。</p>
+<p>CPU要执行的程序必须存放到计算机系统的内存中。内存主要由<code>RAM</code>（Random Access Memory，随机访问存储器）存储器组成，RAM的特点是随机访问（方便的读和写）和易失性（断电会丢失所有数据）。因此，系统上电的瞬间，CPU是不能从内存取指令的（因为此时内存里没任何东西），但CPU只会执行程序，怎么办呢？</p>
+<p>解决的办法就是内存有一小部分是由<code>ROM</code>（Read Only Memory，只读存储器）存储器组成的，ROM的特点是<code>只读</code>（不能随便的写）和非易失性（断电也不会丢失数据）。计算机出厂前，厂家就在ROM存储器中事先存放了一段程序，这就是著名的<code>BIOS</code>（Basic Input Output System，基本输入输出系统）程序。</p>
+<p>因此，计算机一上电，CPU首先会从内存的ROM处执行BIOS程序，开始计算机系统的启动过程。</p>
+<p>BIOS首先从CMOS（Complementary Metal Oxide Semiconductor，互补金属氧化物半导体）中读取系统的各种参数对系统进行最初的设置（用户可以在系统启动时按特殊键进入CMOS修改系统参数）；<strong>然后BIOS对计算机系统进行自检</strong>，即CPU通过执行BIOS中的自检程序来检查计算机的各硬件部分是否正常，包括内存、键盘、显示器等；最后BIOS开始引导操作系统，即CPU通过执行BIOS中的引导程序把操作系统从某个外存（软盘、硬盘、光盘、U盘等）设备上加载到内存中。需要强调一点的是BIOS除上述功能外，还为用户<strong>提供了基本的输入输出系统调用</strong>，即用户可以通过调用BIOS里的子程序来实现对键盘、显示器和磁盘等的基本操作。没有这些底层的、初步的代码支持，我们编写操作系统将寸步难行！或者说我们还没有能力直接在纯裸机上编写程序！</p>
+<p>BIOS引导操作系统时按照CMOS中设置的引导顺序，首先判断第一顺位外存设备上是否有操作系统。若有，则从该外存设备上加载操作系统到内存中，然后把控制权转交给操作系统；若没有，再判断第二顺位外存设备，依次类推。</p>
+<p>各外存设备中，软盘的结构相对简单，因此我们选择软盘作为我们自己编写的操作系统的存储设备，为叙述方便，我们未来的操作系统称之为myos。</p>
+<h3 id="2、开发环境架构"><a href="#2、开发环境架构" class="headerlink" title="2、开发环境架构"></a>2、开发环境架构</h3><p>首先，我们选择在Windows环境下编写myos，毕竟Windows更熟悉一些。</p>
+<p>与编写一般软件不同，编写myos时，需要两台计算机，一台计算机（宿主机）用来编写myos，另一台计算机（目标机）用来调试myos。那么，为了学习编写操作系统，我们真的一定需要两台真实的计算机吗？答案是否。因为现在有虚拟机软件，在宿主机上虚拟出一个目标机可以很好地解决这个问题，一方面不再需要实际的第二台计算机，另一方面在虚拟机中调试myos时，即使myos有问题也不会影响宿主机，还有更重要的一点是保存myos的软盘也是虚拟的，而这个虚拟软盘在没有操作系统的主机上是无法使用的。</p>
+<p>有很多优秀的虚拟机软件，常见的有Vmware Workstation、Oracle VM VirtualBox、Windows Virtual PC以及VMware Player等。我们选择免费的VMware Workstation 15 Player，安装也非常简单，这里不再赘述，请自行安装。</p>
+<p>有了虚拟机，我们还需要软盘来保存myos。软盘曾经是常用的移动外存储器，由软盘驱动器和软盘盘片组成，软盘驱动器固定在计算机中，软盘盘片可以插入或取出。随着FLASH存储器的技术革命，现在已经见不到软盘了，但由于历史的原因以及兼容的缘故，一般计算机系统中仍保留着从软盘启动系统的功能，虚拟机当然也不能例外。虽然没有实际的软盘，但虚拟一个具有软盘功能的文件，则是很方便的事。</p>
+<p>因为编写操作系统要从计算机的底层硬件做起，因此汇编语言是饶不开的。由于VMware Workstation Player虚拟的是x86系统，因此我们要知道一点x86汇编语言的知识。同样，我们选择免费的NASM作为x86汇编器。</p>
+<p>C语言当然是编写操作系统的不二选择，我们需要一个好用的Windows环境下的C语言编译器。同样，我们选择免费的MinGw，MinGw是一个Windows平台下的GNU工具包。</p>
+<p>好啦，一切的一切，都从引导开始！</p>
+<h3 id="3、从引导开始"><a href="#3、从引导开始" class="headerlink" title="3、从引导开始"></a>3、从引导开始</h3><p>我们先把从软盘引导操作系统的过程描述一下：</p>
+<p>电源打开，CPU先执行BIOS，如前所述，配置，自检，然后引导。从软盘引导时首先判断软盘是不是系统盘，即逻<strong>辑第1扇区的最后两个字节是不是0x55和0xAA</strong>。若是（称这个扇区为主引导记录MBR（Master Boot Record）），则把这个扇区的内容读入到内存的0x7C00处（这是古老的魔咒，由BIOS确定，我们只能遵循），然后从该处执行程序（也就是执行软盘逻辑第1扇区的内容）；若不是，则不能从软盘引导。</p>
+<p>因此，从软盘引导时为了从BIOS顺利接管控制权，第一要保证软<strong>盘逻辑第1扇区的最后两个字节为0x55和0xAA</strong>，第二要在软盘的<strong>逻辑第1扇区上写一段程序，这一段程序用于引导myos</strong>，或者也可以把这段程序理解为myos的雏形。</p>
+<p>软盘保护套里面有一张圆形盘片，正反两面都可以保存数据，这需要两个磁头来读写（标记为磁头0和磁头1）。每面上有80个同心圆，称为磁道（标记为磁道0到磁道79）。每个磁道再均匀划分为18等份，每一份称之为扇区（标记为扇区1到扇区18）。每个扇区的大小为512字节，这也是软盘读写数据的最小单位。因此一张软盘的容量为1440KB。</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211122150.png"></p>
+<p>逻辑第1扇区的物理位置是C0-H0-S1（磁道0、磁头0、扇区1的缩写），C0-H0-S2为逻辑第2扇区，…，C0-H0-S18为逻辑第18扇区，C0-H1-S1为逻辑第19扇区，以此类推。这样排序的好处是在不移动磁头（费时）的情况下，尽可能多的读写扇区。</p>
+<p>有了这些基础，接下来我们制作虚拟软盘并试图在虚拟机中从软盘引导操作系统。</p>
+<h4 id="3-1-制作软盘镜像文件"><a href="#3-1-制作软盘镜像文件" class="headerlink" title="3.1 制作软盘镜像文件"></a>3.1 制作软盘镜像文件</h4><p>有很多制作软盘镜像的方法，既可以在Windows下，也可以在Linux下（无论什么操作系统，软盘镜像都是一样的）。这里介绍一种最原始的方法，或许这种方法能让大家更好地理解这些基础知识。</p>
+<p>首先是软盘镜像文件的文件名，其扩展名为img，这是由虚拟机软件确定的，其他名字它不认识，我们将其命名为A.img（这是因为在古老的机器上，软盘驱动器分别被命名为A盘和B盘，这也是为什么我们的硬盘第一个盘符为C的缘故）。显然A.img的大小应为1440KB。</p>
+<p>其次是在A.img文件的结构，A.img到底是一个什么样的文件？其内部结构是怎样的？逻辑第1扇区在什么位置？既然是软盘镜像，我们猜测A.img文件就是连续的以512字节为大小的块（扇区），而逻辑第一扇区就在文件的最开始处。</p>
+<p>基于此，我们用Windows下的Hex Editor Neo编辑器来创建A.img：打开Hex Editor Neo编辑器，新建一个文件，然后在编辑菜单下，改变文件大小为1440KB，可以看到文件最后地址为0x00167FFF。然后将其保存为A.img，存放在myos\myos0子目录下，myos子目录你自己创建。</p>
+<h4 id="3-2-编写并汇编主引导记录程序"><a href="#3-2-编写并汇编主引导记录程序" class="headerlink" title="3.2 编写并汇编主引导记录程序"></a>3.2 编写并汇编主引导记录程序</h4><p>如前所述，软盘上共有2<em>80</em>18=2880个扇区，如何组织这些扇区来保存数据，是由FAT12文件系统来实现的。在这种情况下，主引导记录包括FAT12文件系统参数区、主引导记录代码区以及最后的标记0x55和0xAA。但是在刚开始引导的时候BIOS只会读逻辑第1扇区，而不会用到FAT12文件系统，因此我们在引导记录中也暂时先不包括FAT12文件系统参数区，而只包括引导记录代码区以及最后的引导标记。在记事本中编辑如下x86汇编语言程序，将其命名为boot.asm，并保存在myos0子目录中（行号为叙述方便）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">                ORG        0x7c00  ;RG:执行指令的时候不用，编译的时候用,从0x7c00开始执行</span><br><span class="line">start:        JMP        entry        ;JMP：跳转指令</span><br><span class="line">;-----------------------------------------------------------------------------</span><br><span class="line">;初始化段地址寄存器</span><br><span class="line">entry:        MOV        AX,0        ;将0创传送到AX、 AX:寄存器、mov:传送；</span><br><span class="line">            MOV        SS,AX        ;将AX创传送到SS、SS:堆栈指针</span><br><span class="line">            MOV        DS,AX          ;</span><br><span class="line">            MOV        ES,AX</span><br><span class="line">            MOV        SP,0x7ff0     ;0x7ff0、SP:向低地址发展的。相当于每次减一，所以地址是往上</span><br><span class="line">;初始化完成,设置堆栈</span><br><span class="line">;-----------------------------------------------------------------------------</span><br><span class="line">;调用BIOS功能逐个字符在屏幕上显示hello world!字符串</span><br><span class="line">            MOV        SI,msg              </span><br><span class="line">putloop:    MOV        AL,[SI]        ;寄存器间接寻址</span><br><span class="line">            ADD        SI,1        ;地址加一</span><br><span class="line">            CMP        AL,0           ;CMP:比较</span><br><span class="line">            JE        fin    </span><br><span class="line">            MOV        AH,0x0e</span><br><span class="line">            MOV        BX,15</span><br><span class="line">            INT        0x10           ;调用BIOS的子程序（系统调用、BIOS不仅仅只用引导和自检程序）</span><br><span class="line">            JMP        putloop</span><br><span class="line">;--------------------------------------------------------------------------------</span><br><span class="line">;让系统暂停</span><br><span class="line">fin:        HLT</span><br><span class="line">            JMP        fin</span><br><span class="line">;--------------------------------------------------------------------------------</span><br><span class="line">;定义字符串</span><br><span class="line">            DB        0x0a, 0x0a        ;DB:定义字节  、0x0a:换行、0x0d:回车</span><br><span class="line">            DB        &quot;hello, world!&quot;</span><br><span class="line">            DB        0x0a</span><br><span class="line">;--------------------------------------------------------------------------------</span><br><span class="line">marker:        TIMES    (0x01fe-marker+start) DB 0    ;行重复定义字节并赋处置为0直到0x01fe</span><br><span class="line">            DB        0x55, 0xaa                    ;定义主引导记录（MBR）标记0x55与0xAA</span><br></pre></td></tr></table></figure>
+
+<p>这段代码非常简单，就是在屏幕上显示了hello world!字符串。第1行ORG伪指令定义了后续代码的汇编地址，即这段汇编代码将来在内存中运行时的内存地址。如果大家查阅过资料，就会知道应该在第2行与第三行之间定义FAT12文件系统的参数，因为我们暂时先不涉及文件系统，所以这里先不定义。第3行到第6行初始化段地址寄存器，第7行初始化堆栈指针，第8行到第16行调用BIOS功能逐个字符在屏幕上显示hello world!字符串，第17行和第18行让系统暂停，第19行到第21行定义字符串，第22行重复定义字节并赋处置为0直到0x01fe，第23行定义主引导记录（MBR）标记0x55与0xAA。</p>
+<p>为方便起见，把nams.exe也复制到myos0子目录下。原来设想为方便起见，把windows下的命令行界面cmd.exe（在Windows系统C:\Windows\System32下）文件也拷贝到myos0子目录下，但后来发现这样做总是不太稳定，经常出现一些莫名其妙的结果。因此还是按常规操作启动命令行界面，即在屏幕左下角点击开始按钮，在搜索栏输入cmd，然后回车。</p>
+<p>把当前目录设置为myos0，然后汇编boot.asm</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">masm boot.asm -o boot.bin</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3-把引导记录boot-bin写入软盘镜像文件A-img的逻辑第1扇区"><a href="#3-3-把引导记录boot-bin写入软盘镜像文件A-img的逻辑第1扇区" class="headerlink" title="3.3 把引导记录boot.bin写入软盘镜像文件A.img的逻辑第1扇区"></a>3.3 把引导记录boot.bin写入软盘镜像文件A.img的逻辑第1扇区</h4><p>在Hex Editor Neo编辑器中把boot.bin与A.img都打开，然后把boot.bin的文件内容复制到A.img文件的最前面，存盘退出。</p>
+<h4 id="3-4-在VMware-Workstation-15-Player中测试"><a href="#3-4-在VMware-Workstation-15-Player中测试" class="headerlink" title="3.4 在VMware Workstation 15 Player中测试"></a>3.4 在VMware Workstation 15 Player中测试</h4><p>打开VMware Workstation 15 Player，新建虚拟机，然后设置该虚拟机，在系统选项下选择软驱先启动；在存储选项下添加软盘控制器，之后在软盘控制器下添加虚拟软驱，选择A.img文件。</p>
+<p>运行该虚拟机，不出意外，屏幕上会显示黑底白字“Hello World！”字样！表示计算机启动并BIOS后顺利交接到了我们的boot.bin。在编写myos操作系统的征途上，这虽然是万里长征第一步，但却是坚实可靠的第一步。</p>
+<p>前面向软盘镜像A.img中写入引导记录的方法尽管能从本质上让我们知道到底发生了什么，但有些粗暴。我们写一个程序来实现相同功能就显得优雅多了。</p>
+<p>首先在记事本里面编辑一个C语言源程序writeA.c。该程序通过参数数组的方式引入源文件和目标文件以及写入的扇区位置，然后在程序中把源文件写入目标文件中指定的扇区位置上。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    FILE *rfd, *wfd;</span><br><span class="line">    <span class="keyword">char</span> buf[<span class="number">256</span>];</span><br><span class="line">    <span class="keyword">int</span> offset, bytes, totalbytes=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (argc != <span class="number">4</span>)&#123;</span><br><span class="line">        <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;Usage: %s source target offset\n&quot;</span>, argv[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">if</span>((rfd = fopen(argv[<span class="number">1</span>], <span class="string">&quot;rb&quot;</span>))==<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Can&#x27;t open the file %s! \n&quot;</span>,argv[<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>((wfd = fopen(argv[<span class="number">2</span>], <span class="string">&quot;rb+&quot;</span>))==<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Can&#x27;t open the file %s! \n&quot;</span>,argv[<span class="number">2</span>]);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    offset = atoi(argv[<span class="number">3</span>]);</span><br><span class="line">    offset = (offset - <span class="number">1</span>) * <span class="number">512</span>;</span><br><span class="line">    fseek(wfd, offset, SEEK_SET);</span><br><span class="line">    <span class="keyword">while</span>((bytes = fread(buf, <span class="number">1</span>, <span class="number">256</span>, rfd)) &gt; <span class="number">0</span>)&#123;</span><br><span class="line">        </span><br><span class="line">fwrite(buf, <span class="number">1</span>, bytes, wfd);</span><br><span class="line">        totalbytes += bytes;</span><br><span class="line">    &#125;</span><br><span class="line">    fclose(rfd);</span><br><span class="line">    fclose(wfd);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d bytes copied from %s to %s\n&quot;</span>,totalbytes, argv[<span class="number">1</span>], argv[<span class="number">2</span>]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>把writeA.c复制到myos0下，在命令行界面用gcc编译writeA.c：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc  writeA.c  -o  writea.exe</span><br></pre></td></tr></table></figure>
+
+<p>然后用如下命令写入引导记录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">writea   boot.bin   A.img   1</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、几个基本问题"><a href="#二、几个基本问题" class="headerlink" title="二、几个基本问题"></a>二、几个基本问题</h2><p>我们都知道，操作系统是直接运行在计算机硬件上的系统软件，它的作用是管理计算机系统的资源（硬件资源和软件资源）并为用户使用计算机系统提供方便（良好的使用界面以及功能强大的编程接口），功能上应该包括处理器管理、内存管理、设备管理以及文件管理等。因此，在编写操作系统myos之前，首先要了解myos运行在什么样的计算机上，要管理的资源都有哪些，需要提供哪些基本功能。本讲将回答这些基本问题，为myos的宿主画像。</p>
+<p>强调一点，x86系统由实地址模式和保护模式两种系统，我们只考虑相对简单的实地址模式。简单说，实地址模式下，没有虚拟地址，没有内存管理单元MMU，只有实实在在的物理地址，也就是8086CPU环境。</p>
+<h3 id="1、16位x86基本情况"><a href="#1、16位x86基本情况" class="headerlink" title="1、16位x86基本情况"></a>1、16位x86基本情况</h3><p>我们都知道，计算机系统的硬件包括主机和外设两大部分。其中主机主要包括CPU和内存；而外设则包括输入输出设备和外存。下面我们首先了解一下myos将要运行在其上的系统硬件情况。</p>
+<p>因为myos运行在虚拟机上，而各种虚拟机软件虚拟的都是x86系统，因此myos只能运行在x86系统上。x86经过近半个世纪的发展，历经了16位、32位以及目前的64位。简单起见，我们在这里只考虑x86的16位机。</p>
+<h4 id="1-1-86CPU"><a href="#1-1-86CPU" class="headerlink" title="1.1 86CPU"></a>1.1 86CPU</h4><p>8086CPU是Intel公司于1978年设计开发的16位微处理器芯片，是x86架构的鼻祖。从计算机组成原理课程中我们知道，CPU主要由运算器、控制器和寄存器组组成，下面简要介绍8086CPU的这几个部分。</p>
+<p><code>运算器</code>：从编写操作系统的角度来看，8086是16位CPU，我们只要知道8086运算器能做16位整数的加减乘除以及逻辑运算即可。8086没有浮点协处理器，因此8086不能直接用指令做浮点数运算，但通过编程可以解决浮点数运算问题。</p>
+<p><code>控制器</code>：从编写操作系统的角度来看，控制器的功能主要由各种寄存器实现，我们只要知道8086只能运行在实地址模式下（80286才有保护模式）就行了。</p>
+<p><code>寄存器组</code>：从编写操作系统的角度来，各种寄存器才是我们理解8086CPU的重点。</p>
+<blockquote>
+<p>8086共有14个16位的寄存器，包括4个通用寄存器，5个指针寄存器，4个段寄存器和1个标志寄存器。</p>
+</blockquote>
+<p>4个16位通用寄存器分别命名为AX、BX、CX和DX。顾名思义，通用寄存器用于临时保存任意数都可以，但从各寄存器的名字上再顾名思义，AX通常做累加器，BX一般保存基址，CX主要用作计数器，DX常用于数据传送。</p>
+<p>5个16位指针寄存器分别命名为SI（Source Index）、DI（Destination Index）、BP（Base Pointer）、IP（Instruction Pointer）和SP（Stack Pointer）。这些寄存器主要用于和下述各段寄存器配合生成内存地址。</p>
+<p>4个16位段寄存器分别命名为CS（Code Segment）代码段寄存器、DS（Data Segment）数据段寄存器、ES（Extra Segment）扩展段寄存器和SS（Stack Segment）堆栈段寄存器。</p>
+<p>1个16位标志寄存器FR。该寄存器有意义的包括6位状态位和3位控制位。6位状态位分别为辅助进位标志（AF）、进位标志（CF）、溢出标志（OF）、奇偶标志（PF）、符号标志（SF）和零标志（ZF）；3位控制位分别为方向标志（DF）、中断允许标志（IF）和跟踪标志（TF）。FR寄存器的各位由指令设置和判断，这里不再详解。</p>
+<p>段寄存器和指针寄存器的用法，将在下述内存的介绍中重点阐述。</p>
+<h4 id="1-2-8086的内存地址空间"><a href="#1-2-8086的内存地址空间" class="headerlink" title="1.2 8086的内存地址空间"></a>1.2 8086的内存地址空间</h4><p>内存（内部存储器），顾名思义，是用来保存数据的。简单点说，内存是由成千上万（亿）个存储单元组成的，每个存储单元包含8个存储元，存储元是一个能保存（或者说表示）1位二进制数的逻辑器件。因此每个存储单元的8个存储元能保存8位二进制数，称之为1个字节（Byte）。字节是内存的基本组织单位，也是CPU访问（读写）内存的最基本单位。</p>
+<p>譬如你的笔记本内存是4GB，是说你的笔记本内存包括4*230 =232个字节。这么多个字节，CPU怎么访问呢？编号，给每个字节唯一的一个编号，232个字节当然需要232个编号。每个字节的编号称之为这个字节的地址，这样CPU需要访问内存中哪个字节，只需要给内存给出这个字节的地址，就能够准确地指向这个字节并访问它。</p>
+<p>反过来讲，CPU要能访问整个4GB内存，就要有能给出232个地址的能力。首先，因为地址就是一个编号，也就是一个数，那么在计算机中这个数当然要用二进制数来表示，232个地址至少（理解这个至少吗？）需要用32位二进制数来表示；其次，地址是用来定位内存中某个字节的，因此CPU中生成的地址这个数要传输到内存中去，这个传输要通过CPU和内存之间连接的地址线来完成，32位二进制地址当然需要32条地址线来传输。顺便说一下，CPU和内存之间的连接除了地址线，还有数据线和控制线。</p>
+<p>因此，我们说某个CPU的地址空间是指由这个CPU引出的地址线的条数所决定的内存空间的大小。</p>
+<p>8086CPU是16位机，因此8086的地址线理应是16条，依前所述16条地址线只能给出216个地址，也就是只能访问216=64K个字节的内存。这有点少，为此Intel的工程师们给8086设计了20条地址线，这样8086就具有了能访问220=1M个字节的访存能力，即8086的地址空间是1M，其地址范围为0x00000—0xFFFFF（0x表示16进制数）。</p>
+<p>题外话，也许当初Intel的工程师们曾经为16位机能访问1MB内存的巧妙设计暗自得意过，但他们很快就发现即使扩大16倍的1MB内存也是不够用的，所以在80286中又扩大了16倍，设计了24位地址线，但他们很快就发现还是不够，直到80386的32位地址线，才坚持了比较长的时间。</p>
+<p>现在我们来看16位8086如何生成20位地址，来访问1MB的内存空间。</p>
+<p>我们都知道，一个可执行程序包括代码和数据，程序在执行过程中还要用到堆栈，这几部分都要占用内存。为了管理方便，8086CPU在如何访问内存的机制上引入了段的概念，把内存中用于存放一个程序的代码和数据的区域分别称之为代码段和数据段，承担堆栈功能的区域称之为堆栈段，考虑到一些特殊应用，还增加了一个供程序保存其他数据的扩展段。这样一个程序装入内存执行时，就由4个段组成。</p>
+<p>8086CPU能访问的地址空间0x00000—0xFFFFF是一维的线性地址空间。引入段的概念后，内存中每个字节的地址就可以用段地址：段内偏移这样一个二维地址来描述。段地址当然是段在内存中第一个字节的地址，段内偏移当然是段内某个字节在该段内的相对位置。</p>
+<p>例如某段在内存中的首地址是0x12345，则一维线性地址0x12349对应的二维地址是0x12345:0x4。如果某段在内存中的首地址是0x12340，则一维线性地址0x12349对应的二维地址是0x12340:0x9。你能否明白我的良苦用心？</p>
+<p>8086CPU设置了4个16位段寄存器和5个16位指针（即偏移量）寄存器（见前述），用于保存CPU访问内存中某段时的段地址及段内偏移地址。由于段寄存器是16位而段地址是20位，因此规定每个段的20位段地址中最低4位必须为0，这样在段寄存器中只需保存20位地址的高16位就可以了；又由于指针寄存器也是16位，因此每个段的最大段长只能是64K。</p>
+<p>代码段段寄存器CS与指令指针IP配对指出8086CPU要执行的下一条指令的地址，例如8086CPU上电瞬间，CS=0xFFFF，IP=0x0000（全0或全1容易在上电的瞬间自动生成），因此CPU执行的第一条指令的地址为CS:IP=0xFFFF:0x0000，对应的一维线性地址是0xFFFF*0x10+0x0000=0xFFFF0。</p>
+<p><strong>堆栈段段寄存器SS与堆栈指针SP配对指出堆栈段段内地址，压栈操作时，SP向低地址方向移动；数据段段寄存器DS与索引指针SI或DI配合指出数据段段内地址；扩展段段寄存器ES与索引指针DI配对指出扩展段段内地址。</strong></p>
+<h4 id="1-3-8086的端口地址"><a href="#1-3-8086的端口地址" class="headerlink" title="1.3 8086的端口地址"></a>1.3 8086的端口地址</h4><p>这里的端口是指CPU芯片外面的寄存器，CPU芯片外面都有哪些寄存器呢？</p>
+<p>一是外围部件里面的寄存器。外围部件是指辅助8086CPU工作的功能电路，比如<strong>可编程中断控制器8259A</strong>，里面就有中断请求寄存器、中断屏蔽寄存器以及中断服务寄存器等。再比如可编程定时器8253，里面就有计数寄存器和控制寄存器等。</p>
+<p>二是外部设备里面的寄存器。外部设备是指输入输出设备和外存设备，比如键盘、显示器、硬盘等。各种不同的外部设备接入计算机系统时，都需要一个称之为接口的逻辑部件，接口里面就有用于实现不同功能的各种寄存器，比如键盘接口里面的数据寄存器和控制寄存器等。</p>
+<p>简单来说，编程对各种硬件电路的控制就是通过对这些硬件电路里面的各种寄存器的读写操作来实现的。</p>
+<p>有很多的外围部件和外部设备，也就有很多的各种寄存器。要区分这些寄存器，也只能通过给每个寄存器赋予唯一地址的方式，我们称外围部件的寄存器和外部设备接口里面的寄存器的地址为端口地址。</p>
+<p>如何分配内存地址和端口地址，有两种方案。一是把二者统一映射在CPU的地址空间，称之为统一编址，比如ARM系列；另一种是把二者分别映射在不同的地址空间，称之为单独编址，比如x86系列。</p>
+<p>就8086CPU来说，其地址空间0x00000—0xFFFFF全部用于内存地址，另一地址空间0x0000—0xFFFF全部用于端口地址。访问内存时用MOV指令；访问外围电路和外设时用IN和OUT指令。</p>
+<h3 id="2、BIOS之后的内存映像"><a href="#2、BIOS之后的内存映像" class="headerlink" title="2、BIOS之后的内存映像"></a>2、BIOS之后的内存映像</h3><p>如前所述，8086CPU的内存地址空间是0x00000—0xFFFFF，那么这些地址空间，具体映射到什么地方呢？或者说具体是如何被分配的呢？再或者说，从电路上地址线是如何连接的呢？</p>
+<p>首先，BIOS要占用一些内存地址空间。BIOS是一些程序段，保存在一片ROM存储器中，当计算机上电时，CPU要执行BIOS，因此必须要分配一些内存地址给BIOS所在得ROM存储器。</p>
+<p>其次，计算机的显示器需要一些内存地址空间。这一点后面再说。</p>
+<p>第三，BIOS在执行过程中要占用一些内存空间。一方面，BIOS把引导记录要加载到0x07C00—0x07DFF处；另一方面，BIOS在执行过程中要产生一些很重要的数据，这些数据在后续的系统运行中要使用，因此需要保存在内存的RAM处。</p>
+<p>最后，实地址模式下的中断向量表要占用最初的1KB内存。</p>
+<p>具体的8086实地址模式下的BIOS之后的内存映像如下表所示：</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211145339.png"></p>
+<p>也许，虽然说了一大堆，你还是稀里糊涂，没有关系。从表中可以看出，在BIOS之后，可供我们编写myos能用的内存空间有三部分：0x00500—0x07BFF，大约30KB，事实上7C00—7DFF的0.5KB很快就会自由（能理解吗？）；0x07E00—0x7FFFF，大约480KB；0x80000—0x9FBFF，大约120KB。这些空间怎么用呢？完全取决于你，我想我们可以把一些系统的数据放在0x00500处，而把主要myos内核放在0x10000处，7E00—FFFF就不用了，这样显得整齐一些。</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211145455.png"></p>
+<p>为什么我们需要知道BIOS之后的内存映像呢？因为myos要被加载到内存中去运行，我们只有知道内存的分布情况，才能够确定myos可以被放到什么地方而不影响其他有用的数据。</p>
+<p>还有一个问题就是<strong>BIOS影子内存</strong>的概念。首先，BIOS是否是在ROM中运行？回答是是，系统一上电，BIOS首先肯定是在ROM中运行，只是运行过程中产生的数据被写入到RAM中；其次，程序代码在ROM中运行时，速度比在RAM中运行慢，因此提出了影子内存的解决办法，就是把ROM中的BIOS全部拷贝到RAM中，但是其地址都是一样的，称之为影子内存。我的理解是在保护模式下，通过某种方式把内存的一部分地址空间设置成跟ROM中BIOS的地址空间一模一样，然后在恰当的时机把BIOS从ROM中复制过去，以后调用执行BIOS都从影子内存中去访问。而在实地址模式下，不存在影子内存，但不影响对BIOS的执行，只不过速度慢一点而已。</p>
+<h3 id="4、输入输出问题"><a href="#4、输入输出问题" class="headerlink" title="4、输入输出问题:"></a>4、输入输出问题:</h3><p>前面简单介绍了myos要管理的计算机的主机部分，即CPU和内存。作为一个完整的计算机系统，当然还需要输入输出设备，我们尽量简单，只考虑键盘和显示器。在编写操作系统的过程中，肯定会先遇到显示和键盘输入问题。运行myos，在屏幕上显示一些东西，会有一点成就感；敲击键盘，经过myos，在屏幕上显示A，你会不会很惊喜呢？</p>
+<p>我们会简单介绍键盘及屏幕的基本工作原理，编程上，我们还是要借用BIOS。</p>
+<h3 id="5、外存问题"><a href="#5、外存问题" class="headerlink" title="5、外存问题"></a>5、外存问题</h3><p>接下来还有一个考虑就是外存情况，本着精简原则，myos要运行的虚拟计算机的外存只需要一个软盘就可以了，myos尽量控制在1440KB之内。</p>
+<p>基本上差不多了，myos要运行的硬件环境也就这样。剩余计算机硬件的基本配置，比如鼠标，打印机，网卡，声卡，USB接口，硬盘，串行接口等都不考虑。否则还得为这些东西一个一个写驱动呢。</p>
+<h2 id="三、加载操作系统"><a href="#三、加载操作系统" class="headerlink" title="三、加载操作系统"></a>三、加载操作系统</h2><p>前面写的引导记录其实并没有引导的功能，而只是在屏幕上显示了Hello World字样。这样做的目的主要是<strong>表明我们成功地从BIOS中取得了控制权。</strong></p>
+<p>这一讲，我们试图发挥引导记录的作用，将myos引导到内存中并执行之。</p>
+<p>显然，首先要有myos，然后才能引导它呀！这个好办，我们暂时用一个能在屏幕上显示字符串的程序代表myos（因为真正的myos以后才慢慢写呢），这只要修改原来的boot.asm就可以，下图是简单的一个示意图：</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211153359.png"></p>
+<p>在myos子目录下，把myos0子目录复制一份，改名为myos1。在myos1中，把boot.asm复制一份，改名为myos.asm，并做如下修改：（0x10000）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">            ORG        0x0000</span><br><span class="line">start:        JMP        entry        </span><br><span class="line">entry:        MOV        AX,0</span><br><span class="line">            MOV        SS,AX</span><br><span class="line">            MOV        DS,AX</span><br><span class="line">            MOV        ES,AX</span><br><span class="line">            MOV        SP,0x7ff0</span><br><span class="line">            MOV        SI,msg</span><br><span class="line">putloop:    MOV        AL,[SI]</span><br><span class="line">            ADD        SI,1</span><br><span class="line">            CMP        AL,0</span><br><span class="line">            JE        fin</span><br><span class="line">            MOV        AH,0x0e</span><br><span class="line">            MOV        BX,15</span><br><span class="line">            INT        0x10</span><br><span class="line">            JMP        putloop</span><br><span class="line">fin:        HLT</span><br><span class="line">            JMP        fin</span><br><span class="line">msg:        DB        0x0a, 0x0a</span><br><span class="line">            DB        &quot;myos is running&quot;</span><br><span class="line">            DB        0x0a</span><br><span class="line">marker:        TIMES        (0x01fe-marker+start) DB 0</span><br><span class="line">            DB        0x55, 0xaa</span><br></pre></td></tr></table></figure>
+
+<p>注意，我们只修改了第一行和第20行。第一行表明这个程序将来要放在内存的0x0000处执行（实际应该是0x1000:0x0000，也就是0x10000处）；第20行则仅仅是换了一个字符串而已。</p>
+<p>进入命令行界面，用如下命令把myos.asm汇编成可执行文件：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nasm myos.asm <span class="literal">-o</span> myos.bin</span><br></pre></td></tr></table></figure>
+
+<p>然后，我们需要把myos.bin写入A.img中。前面我们用writea.exe把boot.bin写在了A.img的最前面，相当于是写在了A.img的逻辑第一个扇区上。现在我们把myos.bin写在A.img的偏移512处，相当于写在了A.img的逻辑第二个扇区上。用如下命令实现：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">writea myos.bin a.img <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来应该怎么做呢？现在A.img上有两个文件，一个是boot.bin，一个是myos.bin。boot.bin由BIOS的引导程序加载到内存的0x07c00处，然后执行，运行结果是显示Hello World字符串。而myos.bin的运行结果是显示字符串myos is running!，怎样才能运行myos.bin呢？当然要放在内存中去运行，怎样才能到内存中去呢？当然是boot.bin的责任！因此，现在我们修改boot.bin，让其在打印提示字符串之后，加载myos.bin到内存0x10000处并执行之。</p>
+<p>怎样把软盘上的一个可执行文件读入到内存中？这涉及到文件系统，比较复杂。我们这里先采用比较粗暴的方式，或者说比较简化的方式，即直接以从软盘上读取扇区的方式来完成读可执行文件的操作。myos.bin的大小我们知道是1个扇区，其位置就在A.img的逻辑第二个扇区上。读扇区需要调用BIOS提供的子程序。具体代码如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">            ORG        0x7c00</span><br><span class="line">start:        JMP        entry        </span><br><span class="line">entry:        MOV        AX,CS</span><br><span class="line">            MOV        SS,AX</span><br><span class="line">            MOV        DS,AX</span><br><span class="line">            MOV        ES,AX</span><br><span class="line">            MOV        SP,0x7C00</span><br><span class="line">            MOV        SI,msg    ;初始化字符串</span><br><span class="line">putloop:    MOV        AL,[SI]</span><br><span class="line">            ADD        SI,1</span><br><span class="line">            CMP        AL,0</span><br><span class="line">            JE        next</span><br><span class="line">            MOV        AH,0x0e</span><br><span class="line">            MOV        BX,0x0f</span><br><span class="line">            INT        0x10</span><br><span class="line">            JMP        putloop   ;打印字符串</span><br><span class="line">next:        MOV        AX,0x1000</span><br><span class="line">            MOV        ES,AX</span><br><span class="line">            MOV        BX,0    ; 读到内存0x10000处</span><br><span class="line">            MOV        AH,0x02    ; AH&#x3D;0x02 : 读磁盘</span><br><span class="line">            MOV        DL,0x00    ; 读A驱动器        </span><br><span class="line">            MOV        CH,0    ; 柱面0</span><br><span class="line">            MOV        DH,0    ; 磁头0</span><br><span class="line">            MOV        CL,2    ; 扇区2</span><br><span class="line">            MOV        AL,1    ; 只读1个扇区</span><br><span class="line">            INT        0x13    ; 调用BIOS    把myos读进内存0x10000</span><br><span class="line">            MOV        AX,0x1000</span><br><span class="line">            PUSH    AX</span><br><span class="line">            MOV        AX,0x0</span><br><span class="line">            PUSH    AX</span><br><span class="line">            RETF   ;把0x1000:0x0000地址压入堆栈，然后用段间返回指令RETF来实现跳转</span><br><span class="line">msg:        DB        0x0a, 0x0a</span><br><span class="line">            DB        &quot;Booting from Flopppy!&quot;</span><br><span class="line">            DB        0x0a</span><br><span class="line">marker:    TIMES        (0x01fe-marker+start) DB 0</span><br><span class="line">            DB        0x55, 0xaa</span><br></pre></td></tr></table></figure>
+
+<p>把汇编之后的boot.asm重新写入A.img的第一个扇区，如下所示：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:&gt;masm boot.asm <span class="literal">-o</span> boot.bin</span><br><span class="line">:&gt;writea boot.bin A.img <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果如下所示把汇编之后</p>
+<p><img src="https://gulimall-ckq.oss-cn-chengdu.aliyuncs.com/PIcGO/20201211153157.png"></p>
+<p>这里需要说明一下，boot.bin在0x0000:0x7c00处，相当于在段0x0000中，而myos.bin在0x1000:0x0000处，相当于在段0x1000中，二者不在同一个段中，所以从boot.bin跳转到myos.bin颇费了一番周折。这里采用了一个技巧，即把0x1000:0x0000地址压入堆栈，然后用段间返回指令RETF来实现跳转，很是精妙！（调用的时候直接把地址压栈，返回的时候相当于退栈，指向返回指令的时候相当于设置CS IP）</p>
+<p>我们始终设置堆栈在0x0000:0x7c00处，必须知道SP指针是向低地址方向走的。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechatPay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+            
+      
+
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">javaSE</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JUC</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">高并发</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">BIOS</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://xxakq.github.io/2020/10/01/OS/%E5%AE%9E%E6%93%8D%E7%AF%87/01_%E4%BB%8E%E5%BC%95%E5%AF%BC%E5%BC%80%E5%A7%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/10/02/OS/%E5%AE%9E%E6%93%8D%E7%AF%87/02_%E9%A6%96%E5%85%88%E8%80%83%E8%99%91%E6%98%BE%E5%AD%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          OS实操篇_首先考虑显存
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/01/14/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F_%E7%BC%93%E5%AD%98%E7%AF%87/%E5%88%86%E5%B8%83%E5%BC%8F_%E7%BC%93%E5%AD%98%E7%AF%87/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">分布式-缓存篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E5%88%87%E7%9A%84%E4%B8%80%E5%88%87%EF%BC%8C%E4%BB%8E%E5%BC%95%E5%AF%BC%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%B9%B6%E5%8E%BB%E5%8A%A0%E8%BD%BD%E6%88%91%E4%BB%AC%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text">一切的一切，从引导开始，并去加载我们的操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%83%BD%E4%BB%8E%E5%BC%95%E5%AF%BC%E5%BC%80%E5%A7%8B%EF%BC%81"><span class="toc-number">1.1.</span> <span class="toc-text">一、都从引导开始！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">1 、计算机系统的启动过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%9E%B6%E6%9E%84"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、开发环境架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E4%BB%8E%E5%BC%95%E5%AF%BC%E5%BC%80%E5%A7%8B"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、从引导开始</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E5%88%B6%E4%BD%9C%E8%BD%AF%E7%9B%98%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">3.1 制作软盘镜像文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E7%BC%96%E5%86%99%E5%B9%B6%E6%B1%87%E7%BC%96%E4%B8%BB%E5%BC%95%E5%AF%BC%E8%AE%B0%E5%BD%95%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">3.2 编写并汇编主引导记录程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-%E6%8A%8A%E5%BC%95%E5%AF%BC%E8%AE%B0%E5%BD%95boot-bin%E5%86%99%E5%85%A5%E8%BD%AF%E7%9B%98%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6A-img%E7%9A%84%E9%80%BB%E8%BE%91%E7%AC%AC1%E6%89%87%E5%8C%BA"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">3.3 把引导记录boot.bin写入软盘镜像文件A.img的逻辑第1扇区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-%E5%9C%A8VMware-Workstation-15-Player%E4%B8%AD%E6%B5%8B%E8%AF%95"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">3.4 在VMware Workstation 15 Player中测试</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%87%A0%E4%B8%AA%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98"><span class="toc-number">1.2.</span> <span class="toc-text">二、几个基本问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%8116%E4%BD%8Dx86%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5"><span class="toc-number">1.2.1.</span> <span class="toc-text">1、16位x86基本情况</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-86CPU"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">1.1 86CPU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-8086%E7%9A%84%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">1.2 8086的内存地址空间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-8086%E7%9A%84%E7%AB%AF%E5%8F%A3%E5%9C%B0%E5%9D%80"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">1.3 8086的端口地址</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81BIOS%E4%B9%8B%E5%90%8E%E7%9A%84%E5%86%85%E5%AD%98%E6%98%A0%E5%83%8F"><span class="toc-number">1.2.2.</span> <span class="toc-text">2、BIOS之后的内存映像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98"><span class="toc-number">1.2.3.</span> <span class="toc-text">4、输入输出问题:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%A4%96%E5%AD%98%E9%97%AE%E9%A2%98"><span class="toc-number">1.2.4.</span> <span class="toc-text">5、外存问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%8A%A0%E8%BD%BD%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.</span> <span class="toc-text">三、加载操作系统</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  
+  
 
 
           </div>
@@ -256,8 +533,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -345,6 +622,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">springCache</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">BIOS</a>
               </li>
              
               <li class="article-tag-list-item">
